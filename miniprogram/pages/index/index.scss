@@ -1,19 +1,205 @@
 /**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #aaa;
-}
+@import '../../assets/css/common.scss';
+.indexcontainer {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  // padding: 5px;
 
-.userinfo-avatar {
-  overflow: hidden;
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
+  .heardbox {
+    position: relative;
+    .heard {
+      width: 375px;
+      height: 200px;
+      line-height: 20px;
+      background-color: #477996;
+    }
+    .swiper {
+      position: absolute;
+      left: 11px;
+      top: 20px;
+      width: 354px;
+      height: 156px;
+      border-radius: 6px;
+    }
+  }
 
-.usermotto {
-  margin-top: 200px;
+  .bcg {
+    width: 386px;
+    height: 116px;
+    line-height: 20px;
+    background-color: #477996;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+  }
+
+  .address {
+    position: absolute;
+    left: 32px;
+    top: 185px;
+    width: 312px;
+    height: 193px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 30px;
+    border-radius: 14px;
+    background-color: rgba(255, 255, 255, 100);
+    box-shadow: 0px 3px 7px 2px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(187, 187, 187, 100);
+
+    .flyicon {
+      height: 44px;
+      width: 46px;
+    }
+  }
+
+  .service {
+    position: absolute;
+    top: 400px;
+    left: 13px;
+    border-radius: 25px;
+    width: 357px;
+    height: 50px;
+    background: #ff6600;
+    color: #fff;
+    font-family: normal;
+
+    .text {
+      margin-left: 30px;
+      line-height: 25px;
+
+      .text2 {
+        color: #e6d0c1;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .express {
+    .box {
+      position: absolute;
+      width: 162px;
+      height: 162px;
+      line-height: 20px;
+      border-radius: 14px;
+      background-color: #9877bb;
+      color: rgba(16, 16, 16, 100);
+      font-size: 14px;
+      text-align: center;
+      box-shadow: 0px 3px 7px 2px rgba(0, 0, 0, 0.4);
+      font-family: Arial;
+      border: 1px solid rgba(187, 187, 187, 100);
+      color: #F7F6F6;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .left {
+      left: 14px;
+      top: 460px;
+      .text1 {
+        font-size: 28px;
+        margin: 15px;
+      }
+
+      .row {
+        position: absolute;
+        left: 32px;
+        top: 111px;
+        width: 29px;
+        height: 27px;
+        background-color: #422da5;
+        box-shadow: 1px 3px 10px 1px rgba(0, 0, 0, 0.4);
+        border-radius: 30px;
+        font-size: 20px;
+        line-height: 27px;
+      }
+      .img {
+        position: absolute;
+        right: 5px;
+        top: 90px;
+        width: 64px;
+        height: 64px;
+      }
+    }
+
+    .right {
+      background: #fc9d62;
+      position: absolute;
+      right: 14px;
+      top: 460px;
+      color: #eb732a;
+
+      .text1 {
+        font-size: 28px;
+        margin: 15px;
+      }
+
+        .row {
+          position: absolute;
+          left: 32px;
+          top: 106px;
+          width: 29px;
+          height: 27px;
+          box-shadow: 1px 3px 10px 1px rgba(0, 0, 0, 0.4);
+          border-radius: 30px;
+          font-size: 20px;
+          line-height: 27px;
+          color: #fff;
+          background-color: #ff6200;
+        }
+        .img {
+          position: absolute;
+          right: 5px;
+          top: 90px;
+          width: 64px;
+          height: 64px;
+        }
+    }
+  }
+
+  .relax {
+    position: absolute;
+    top: 660px;
+    height: 40px;
+    color: rgba(0, 0, 0, 1);
+    font-size: 34px;
+    text-align: left;
+    .text {
+      margin-left: 15px;
+    }
+    .img {
+      width: 375px;
+      height: 109px;
+    }
+  }
+
+  .copycontainer {
+    position: absolute;
+    left: 23px;
+    top: 850px;
+    height: 100px;
+
+    image {
+      width: 17px;
+      height: 17px;
+    }
+
+    .copytext1 {
+      width: 330px;
+      height: 40px;
+      border-radius: 19px;
+      background-color: #4c168e;
+      color: #fff;
+      font-size: 16px;
+      text-align: center;
+      line-height: 40px;
+    }
+    .copytext2 {
+      color: #4C168E;
+      text-align: center;
+      font-size: 14px;
+    }
+  }
 }

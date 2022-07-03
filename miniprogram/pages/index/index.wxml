@@ -1,23 +1,57 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <block wx:if="{{canIUseOpenData}}">
-      <view class="userinfo-avatar" bindtap="bindViewTap">
-        <open-data type="userAvatarUrl"></open-data>
-      </view>
-      <open-data type="userNickName"></open-data>
-    </block>
-    <block wx:elif="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
-    </block>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<view class="indexcontainer">
+  <view class="heardbox">
+    <view class="heard">
+      <swiper class="swiper" >
+        <swiper-item wx:for="{{itemurl}}">
+          <image class="imgsize"  mode="aspectFill" src="{{item.img}}"></image>
+        </swiper-item>
+      </swiper>
+    </view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class="bcg"></view>
+  <view class="address">
+    <view>中国</view>
+    <view class="flyicon">
+      <image class="imgsize"  mode="aspectFit" src="../../assets/images/fly.png" alt="" />
+    </view>
+    <view>美国</view>
+  </view>
+  <view class="service">
+    <view class="text">
+      <view>联系河马</view>
+      <view class="text2">为你解决下单疑问？</view>
+    </view>
+  </view>
+  <view class="express">
+    <view class="box left">
+      <view class="text1">转运需知</view>
+      <view>流程和注意事项</view>
+      <view class="row">></view>
+      <view class="img">
+      <image  class="imgsize" src="../../assets/images/car.png"></image>
+      </view>
+    </view>
+    <view class="box right">
+      <view class="text1">费用估算</view>
+      <view>费用心中有数</view>
+        <view class="row">></view>
+        <view class="img">
+          <image class="imgsize"  mode="aspectFit" src="../../assets/images/computer.png"></image>
+        </view>
+    </view>
+  </view>
+  <view class="relax">
+    <view class="text">轻松转运</view>
+    <view class="img">
+      <image class="imgsize" src="../../assets/images/transport.png"></image>
+    </view>
+  </view>
+  <view class="copycontainer">
+    <view class="copytext1">
+    <image class="imgsize"  src="../../assets/images/copy.png"></image>
+    <text>复制仓库地址去购物</text>
+    </view>
+    <view class="copytext2">电商平台的收货地址请写我们</view>
   </view>
 </view>
