@@ -1,13 +1,18 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/order/order"
+    "pages/order/order",
+    "pages/coupon/coupon",
+    "pages/users/users",
+    "pages/address/address",
+    "pages/selectAddress/selectAddress"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#467895",
     "navigationBarTitleText": "海豚速运",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white",
+    "backgroundColorTop": "black"
   },
   "tabBar": {
     "list": [
@@ -18,13 +23,30 @@
         "selectedIconPath": "/assets/images/home_select.png"
       },
       {
+        "pagePath": "pages/coupon/coupon",
+        "text": "优惠券",
+        "iconPath": "/assets/images/coupon.png",
+        "selectedIconPath": "/assets/images/coupon_select.png"
+      },
+      {
         "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "/assets/images/order.png",
+        "selectedIconPath": "/assets/images/order_select.png"
+      },
+      {
+        "pagePath": "pages/users/users",
         "text": "订单",
         "iconPath": "/assets/images/user.png",
         "selectedIconPath": "/assets/images/user_select.png"
       }
     ]
   },
-  "style": "v2",
+  "usingComponents": {
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-field": "@vant/weapp/field/index"
+  },
   "sitemapLocation": "sitemap.json"
 }

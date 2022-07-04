@@ -1,0 +1,61 @@
+/* Components/Address/Address.wxss */
+@import '../../assets/css/common.scss';
+
+.addresscontainer {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 347*2rpx;
+  height: 135*2rpx;
+  line-height: 40rpx;
+  opacity: 0.85;
+  border-radius: 6rpx;
+  background-color: rgba(255, 255, 255, 79);
+  color: #101010;
+  font-size: 32rpx;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 100);
+  padding: 30rpx;
+
+  .flex {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30rpx;
+
+    .img {
+      width: 26px;
+      height: 26px;
+      line-height: 20px;
+      background-color: #467895;
+      color: rgba(255, 255, 255, 100);
+      font-size: 14px;
+      text-align: center;
+      border: 1px solid rgba(76, 22, 142, 100);
+      border-radius: 50%;
+      padding: 2px;
+      margin-right: 30rpx;
+    }
+
+    .phone {
+      margin-left: 80rpx;
+    }
+
+    .copy {
+      width: 52rpx;
+      height: 28rpx;
+      border-radius: 4px;
+      background-color: rgba(217, 241, 221, 100);
+      color: rgba(64, 184, 80, 100);
+      font-size: 20rpx;
+      text-align: center;
+      line-height: 28rpx;
+      border: 1px solid rgba(217, 241, 221, 100);
+      margin-left: 10rpx;
+    }
+  }
+
+  .addresstext {
+    color: #999999;
+    font-size: 24rpx;
+  }
+}

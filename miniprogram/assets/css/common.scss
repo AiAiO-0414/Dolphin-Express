@@ -2,3 +2,30 @@
   width: 100%;
   height: 100%;
 }
+
+.flex_c_c{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex_a_c {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flex_b_c {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addressform {
+  margin-top: 20rpx;
+}
+
+.flex_a {
+  display: flex;
+  align-items: center;
+}

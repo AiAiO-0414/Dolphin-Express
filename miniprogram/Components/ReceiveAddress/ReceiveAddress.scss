@@ -1,0 +1,71 @@
+@import '../../assets/css/common.scss';
+
+.ReceiveContainer {
+  box-sizing: border-box;
+  width: 347*2rpx;
+  height: 370*2rpx;
+  line-height: 40rpx;
+  opacity: 0.85;
+  border-radius: 6rpx;
+  background-color: rgba(255, 255, 255, 79);
+  color: rgba(16, 16, 16, 100);
+  font-size: 28rpx;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 100);
+  margin-top: 50rpx;
+  padding: 50rpx;
+
+  .title {
+    color: #101010;
+    font-size: 32rpx;
+    font-weight: 600;
+    margin-left: 40rpx;
+  }
+
+  .addAddress {
+    position: absolute;
+    left: 275*2rpx;
+    top: 240*2rpx;
+    width: 65*2rpx;
+    height: 23*2rpx;
+    border-radius: 8rpx;
+    background-color: rgba(217, 241, 221, 100);
+    color: rgba(64, 184, 80, 100);
+    font-size: 24rpx;
+    text-align: center;
+    border: 1px solid rgba(64, 184, 80, 100);
+  }
+
+  .flex {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50rpx;
+
+    input {
+      width: 600rpx;
+    }
+
+    .laber {
+      width: 75*2rpx;
+    }
+
+    .img {
+      width: 32*2rpx;
+      height: 32*2rpx;
+      color: rgb(95, 40, 40);
+    }
+  }
+
+}
+.button {
+  width: 162*2rpx;
+  height: 76rpx;
+  border-radius: 8rpx;
+  background-color:#467895;
+  color: rgba(255, 255, 255, 100);
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 76rpx;
+  margin-top: 50rpx;
+  margin-left: 150rpx;
+}

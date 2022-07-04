@@ -1,0 +1,5 @@
+<!--pages/address/address.wxml-->
+<view class="container">
+  <Address></Address>
+  <ReceiveAddress phoneNumber='{{phoneNumber}}'></ReceiveAddress>
+</view>

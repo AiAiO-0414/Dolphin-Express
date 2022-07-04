@@ -1,0 +1,15 @@
+<view class="ReceiveContainer">
+  <view class="title">目标国收件信息</view>
+  <van-notice-bar color="red" left-icon="info-o" text="请用英文填写" />
+  <view class="addAddress" bindtap="addAddress">+选择地址</view>
+  <view class="addressform">
+    <view class="flex" wx:for="{{addressformText}}" wx:key="id">
+      <text class="laber">{{item.title}}</text>
+      <view style="display:{{isshow ? 'block' : 'none'}};" class="img">
+        <image class="imgsize" mode="aspectFit" src="{{item.img}}"></image>
+      </view>
+      <input data-index="{{index}}" bindinput="regtext" type="text" placeholder="{{item.text}}" value="{{phoneNumber}}" />
+    </view>
+  </view>
+</view>
+<view class="button">立即转运</view>

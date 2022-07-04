@@ -2,22 +2,35 @@
 <view class="indexcontainer">
   <view class="heardbox">
     <view class="heard">
-      <swiper class="swiper" >
-        <swiper-item wx:for="{{itemurl}}">
-          <image class="imgsize"  mode="aspectFill" src="{{item.img}}"></image>
+      <swiper class="swiper" autoplay="true" circular="true" indicator-dots="true" indicator-active-color="#ffffff">
+        <swiper-item wx:for="{{itemurl}}" wx:key="id">
+          <image class="imgsize" mode="aspectFill" src="{{item.img}}"></image>
         </swiper-item>
       </swiper>
     </view>
   </view>
   <view class="bcg"></view>
   <view class="address">
-    <view>中国</view>
-    <view class="flyicon">
-      <image class="imgsize"  mode="aspectFit" src="../../assets/images/fly.png" alt="" />
+    <view class="flex_a_c text">
+      <view>中国</view>
+      <view class="flyicon">
+        <image class="imgsize" mode="aspectFit" src="../../assets/images/fly.png" alt="" />
+      </view>
+      <view>美国</view>
+      <van-dialog use-slot title="预选渠道" show="{{ show }}" show-cancel-button bind:close="onClose" bind:confirm="yesbutton" >
+      <view class="flex_b_c dialog" >
+       <view data-index="{{index}}" class="dialogtext" wx:for="{{channeltext}}" wx:key="id" bindtap="channel"
+       style="background:{{key === index ? '#4e148c' : ''}};color:{{key === index ? '#fff' : ''}}"
+       >{{item.textItem}}</view>
+      </view>
+      </van-dialog>
     </view>
-    <view>美国</view>
+    <view class="button" bindtap="transport">立即转运</view>
   </view>
   <view class="service">
+    <view class="img">
+      <image class="imgsize" mode="aspectFit" src="../../assets/images/server.png" alt="" />
+    </view>
     <view class="text">
       <view>联系河马</view>
       <view class="text2">为你解决下单疑问？</view>
@@ -29,16 +42,16 @@
       <view>流程和注意事项</view>
       <view class="row">></view>
       <view class="img">
-      <image  class="imgsize" src="../../assets/images/car.png"></image>
+        <image class="imgsize" src="../../assets/images/car.png"></image>
       </view>
     </view>
     <view class="box right">
       <view class="text1">费用估算</view>
       <view>费用心中有数</view>
-        <view class="row">></view>
-        <view class="img">
-          <image class="imgsize"  mode="aspectFit" src="../../assets/images/computer.png"></image>
-        </view>
+      <view class="row">></view>
+      <view class="img">
+        <image class="imgsize" mode="aspectFit" src="../../assets/images/computer.png"></image>
+      </view>
     </view>
   </view>
   <view class="relax">
@@ -49,8 +62,8 @@
   </view>
   <view class="copycontainer">
     <view class="copytext1">
-    <image class="imgsize"  src="../../assets/images/copy.png"></image>
-    <text>复制仓库地址去购物</text>
+      <image class="imgsize" src="../../assets/images/copy.png"></image>
+      <text>复制仓库地址去购物</text>
     </view>
     <view class="copytext2">电商平台的收货地址请写我们</view>
   </view>

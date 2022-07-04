@@ -1,0 +1,18 @@
+<!--Components/Address/Address.wxml-->
+<view class="addresscontainer">
+  <view class="flex">
+    <view class="img">
+      <image class="imgsize" mode="aspectFit" src="../../assets/images/address.png" alt="" />
+    </view>
+    <view class="text">仓库地址</view>
+  </view>
+  <view class="flex">
+    <view>海豚仓库</view>
+    <view class="phone">{{phoneNumber}}</view>
+    <view class="copy" bindtap="copyphone">复制</view>
+    <view class="address"></view>
+  </view>
+  <view class="addresstext">
+    <text>深圳市龙华区观澜街道银星科技园第三期A区B座1077室</text>
+  </view>
+</view>

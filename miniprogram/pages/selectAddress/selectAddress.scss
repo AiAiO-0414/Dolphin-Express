@@ -1,0 +1,73 @@
+@import 'assets/css/common.scss';
+
+.selectcontainer {
+  box-sizing: border-box;
+
+  .mine {
+    justify-content: space-around;
+    align-items: center;
+    width: 375*2rpx;
+    height: 164rpx;
+    line-height: 40rpx;
+    background-color: rgba(255, 255, 255, 100);
+    border: 2rpx solid rgba(255, 255, 255, 100);
+    padding-top: 40rpx;
+    margin-left: 30rpx;
+    box-sizing: border-box;
+
+    .my {
+      width: 64rpx;
+      height: 64rpx;
+      line-height: 40rpx;
+      background-color: #1a3a66;
+      color: rgba(255, 255, 255, 100);
+      font-size: 28rpx;
+      text-align: center;
+      border-radius: 50%;
+      border: 2rpx solid #1a3a66;
+      box-sizing: border-box;
+    }
+
+    .right {
+      position: absolute;
+      top: 25rpx;
+      left: 100rpx;
+      margin-left: 30rpx;
+      font-size: 14px;
+
+      .phone {
+        margin-left: 50rpx;
+      }
+
+      .address {
+        font-size: 12px;
+        color: #999999;
+      }
+    }
+  }
+
+  .default {
+    margin-top: 60rpx;
+    font-size: 24rpx;
+    color: #1a3a66;
+
+    radio {
+      transform: scale(0.7)
+    }
+  }
+
+  .button {
+    position: absolute;
+    left: 22rpx;
+    bottom: 30rpx;
+    width: 355*2rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-radius: 40rpx;
+    background-color:#1a3a66;
+    color: rgba(255, 255, 255, 100);
+    font-size: 30rpx;
+    text-align: center;
+    border: 1px solid #1a3a66;
+  }
+}
