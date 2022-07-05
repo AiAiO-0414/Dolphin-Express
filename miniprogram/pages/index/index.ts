@@ -32,7 +32,7 @@ Page({
   },
   yesbutton() {
     wx.navigateTo({
-      url:'/pages/address/address',
+      url:'/pages/AddressItem/address/address',
       success:(res)=>{
         console.log(res);
       }
@@ -41,4 +41,19 @@ Page({
   onClose() {
     this.setData({ show: false });
   },
+  goshopping(){
+    wx.navigateTo({
+      url:'/pages/AddressItem/CopyInfo/copyinfo'
+    })
+  },
+  cost(){
+    wx.navigateTo({
+      url:'/pages/cost/cost'
+    })
+  },
+  notice(){
+    wx.navigateTo({
+      url:'/pages/notice/notice'
+    })
+  }
 })

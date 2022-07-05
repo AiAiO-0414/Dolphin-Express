@@ -1,50 +1,81 @@
-import { url } from "inspector";
-
 // Components/ReceiveAddress/ReceiveAddress.ts
 Component({
   properties: {
-    phoneNumber:String
+    addressData: Object
   },
-  data: {
-    isshow: false,
-    key: 0,
-    addressformText: [
-      { id: 1, title: 'Name：', img: '/assets/images/gantan.png', text: 'Please fill in the recipient‘s name', status: false },
-      { id: 2, title: 'Phone：', img: '/assets/images/gantan.png', text: 'Please fill in the recipient‘s phone' },
-      { id: 3, title: 'Address：', img: '/assets/images/gantan.png', text: 'Please fill in the address' },
-      { id: 4, title: 'City：', img: '/assets/images/gantan.png', text: 'Please fill in the city' },
-      { title: 'PostCode：', img: '/assets/images/gantan.png', text: 'Please fill in the postcode' },
-    ]
-  },
-  
-  /**
-   * 组件的方法列表
-   */
-  methods: {
-    regtext(e: any) {
-      var ids = e.currentTarget.dataset.index
-      let value = e.detail.value
-      var reg = /[\u4e00-\u9fa5]/;
-      let isHide = reg.test(value);
-      // this.data.addressformText.forEach((item:any)=>{
-      //   console.log(item.status);
-      // })
-      if (isHide) {
-        // value = value.replace(reg, '')
+  // observers: {
+  //   'addressData': function (this: any, value: any) {
+  //     console.log(value, 'dbs');
+  //     this.setData({
+  //       inputvalue: value
+  //     })
+  //       let result = this.data.addressformText.map((item: any) => {
+  //         // if(item.id == )
+  //         if(item.id === 1) {
+  //            item.value = value.username
+  //          return item
+  //         }
+
+  //       })
+  //       console.log(result,'r');
+
+  //     }
+  //   },
+    data: {
+      isshow: false,
+      key: '',
+      inputvalue: '',
+      addressformText: [
+        { id: 1, title: 'Name：', img: '/assets/images/gantan.png', text: 'Please fill in the recipient‘s name', status: 'none', value: '' },
+        { id: 2, title: 'Phone：', img: '/assets/images/gantan.png', text: 'Please fill in the recipient‘s phone', status: 'none', value: '' },
+        { id: 3, title: 'Address：', img: '/assets/images/gantan.png', text: 'Please fill in the address', status: 'none', value: '' },
+        { id: 4, title: 'City：', img: '/assets/images/gantan.png', text: 'Please fill in the city', status: 'none', value: '' },
+        { id: 5, title: 'PostCode：', img: '/assets/images/gantan.png', text: 'Please fill in the postcode', status: 'none', value: '' }
+      ]
+    },
+
+    methods: {
+      regtext(this: any, e: any) {
+        var ids = e.currentTarget.dataset.index + 1
         this.setData({
           key: ids
         })
-      }
-      console.log(this.data.key, 'key');
+        console.log(ids, 'ids');
+        let value = e.detail.value
+        var reg = /[\u4e00-\u9fa5]/;
+        let isHide = reg.test(value);
+        if (ids == this.data.key) {
+          let result = this.data.addressformText.map((item: any) => {
+            if (item.id == ids && isHide) {
+              item.status = '';
+            } else {
+              item.status = 'none'
+            }
+            return item
+          });
+          this.setData({
+            addressformText: result
+          })
+        }
+      },
+
+      addAddress() {
+        wx.navigateTo({
+          url: '/pages/AddressItem/selectAddress/selectAddress',
+          // success: (res) => {
+          //   console.log(res);
+          // }
+        })
+      },
+    },
+    lifetimes: {
+      attached: function () {
+        // 在组件实例进入页面节点树时执行
+        console.log('this', this);
+      },
+      detached: function () {
+        // 在组件实例被从页面节点树移除时执行
+      },
     },
 
-    addAddress() {
-      wx.navigateTo({
-        url: '/pages/selectAddress/selectAddress',
-        success: (res) => {
-          console.log(res);
-        }
-      })
-    },
-  }
-})
+  })

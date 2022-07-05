@@ -1,1 +1,18 @@
-/* pages/coupon/coupon.wxss */
+@import 'assets/css/common.scss';
+.head {
+  width: 375*2rpx;
+  height: 200rpx;
+  line-height: 20*2rpx;
+  background-color: #e7691d;
+  color: rgba(255, 255, 255, 100);
+  font-size: 14*2rpx;
+  text-align: center;
+}
+
+.img {
+  box-sizing: border-box;
+  margin: 30rpx 0 0 40rpx;
+  width: 666rpx;
+  height: 240rpx;
+  border-radius: 20rpx;
+}

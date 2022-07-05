@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="coupon flex_a_c">
+    <view class="price">
+      <view>
+        <text class="text1">￥</text>
+        <text class="text2">100</text>
+      </view>
+      <view class="text1">满￥599使用</view>
+    </view>
+    <view class="right">
+      <van-tag color="#f2826a">满减券</van-tag>
+      <text class="text1">双十一无门槛10元券</text>
+      <view class="text2">
+       <view>
+        <text class="time">2018.04.11到期</text>
+        <text>(仅剩1天)</text>
+       </view>
+        <view class="btn">
+          <text>立即领取</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

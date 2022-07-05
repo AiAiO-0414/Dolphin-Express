@@ -1,2 +1,75 @@
-<!--pages/users/users.wxml-->
-<text>pages/users/users.wxml</text>
+<view class="usercontainer">
+  <view class="head">
+    <!-- <button bindtap="getinfo">1111</button> -->
+    <view>
+      <image class="avatar" src="https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJLc60C0icHn1ibibHjiaYjGZBzAqrKvVxj3ZlPiaicwlykveaCb4gTUQbbSvpoSkZNdGILicPIzstPJia24Q/132" mode="cover"></image>
+      <text class="username">AiAiO</text>
+    </view>
+  </view>
+  <view class="order">
+    <view class="flex_b_c text">
+      <view class="text1">我的订单</view>
+      <view class="text2">全部订单 ></view>
+    </view>
+    <view class="flex_a_c icon">
+      <view>
+        <view class="img">
+          <image class="imgsize" src="/assets/images/fu.png"></image>
+          <view class="info">9</view>
+        </view>
+        <view>待支付</view>
+      </view>
+      <view>
+        <view class="img">
+          <image class="imgsize" src="/assets/images/fa.png"></image>
+          <view class="info">9</view>
+        </view>
+        <view>待发货</view>
+      </view>
+      <view>
+        <view class="img">
+          <image class="imgsize" src="/assets/images/shou.png"> </image>
+          <view class="info">9</view>
+        </view>
+        <view>待收货</view>
+      </view>
+      <view>
+        <view class="img">
+          <image class="imgsize" src="/assets/images/ping.png"></image>
+          <view class="info">9</view>
+        </view>
+        <view>待评价</view>
+      </view>
+    </view>
+  </view>
+  <view class="address">
+    <view class="flex_b_c addressitem" bindtap="adddressbtn">
+      <view >我的地址</view>
+      <van-icon name="arrow" color="#ccc" />
+    </view>
+    <view class="flex_b_c addressitem">
+      <view>我的优惠卷</view>
+      <van-icon name="arrow" color="#ccc" />
+    </view>
+    <view class="flex_b_c addressitem">
+      <view>活动中心</view>
+      <van-icon name="arrow" color="#ccc" />
+    </view>
+    <view class="flex_b_c addressitem">
+      <view>联系客服</view>
+      <van-icon name="arrow" color="#ccc" />
+    </view>
+    <view class="flex_b_c addressitem">
+      <view>转运流程</view>
+      <van-icon name="arrow" color="#ccc"/>
+    </view>
+    <view class="flex_b_c addressitem">
+      <view>转运须知</view>
+      <van-icon name="arrow" color="#ccc" />
+    </view>
+    <view class="flex_b_c addressitem">
+      <view>关于我们</view>
+      <van-icon name="arrow" color="#ccc" />
+    </view>
+  </view>
+</view>

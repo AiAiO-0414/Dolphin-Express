@@ -3,12 +3,12 @@
   <van-notice-bar color="red" left-icon="info-o" text="请用英文填写" />
   <view class="addAddress" bindtap="addAddress">+选择地址</view>
   <view class="addressform">
-    <view class="flex" wx:for="{{addressformText}}" wx:key="id">
+    <view class="flex" data-id="{{id}}" wx:for="{{addressformText}}" wx:key="id">
       <text class="laber">{{item.title}}</text>
-      <view style="display:{{isshow ? 'block' : 'none'}};" class="img">
+      <view style="display:{{item.status}};" class="img">
         <image class="imgsize" mode="aspectFit" src="{{item.img}}"></image>
       </view>
-      <input data-index="{{index}}" bindinput="regtext" type="text" placeholder="{{item.text}}" value="{{phoneNumber}}" />
+      <input data-index="{{index}}" bindinput="regtext" type="text" placeholder="{{item.text}}" />
     </view>
   </view>
 </view>

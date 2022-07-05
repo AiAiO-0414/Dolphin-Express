@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "Address":"/Components/Address/Address"
+  }
+}

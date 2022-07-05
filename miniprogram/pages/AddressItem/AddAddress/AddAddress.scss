@@ -1,0 +1,53 @@
+/* pages/AddAddress/AddAddress.wxss */
+@import 'assets/css/common.scss';
+
+.addressform {
+  box-sizing: border-box;
+  border-bottom: 1px solid #b9b9b9;
+
+  //  margin-left: 30rpx;
+  .flex {
+    width: 700rpx;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    margin-bottom: 50rpx;
+
+    input {
+      width: 550rpx;
+    }
+
+    .laber {
+      width: 180rpx;
+    }
+
+    .img {
+      width: 32*2rpx;
+      height: 32*2rpx;
+      color: rgb(95, 40, 40);
+    }
+  }
+}
+
+.default {
+  width: 682rpx;
+  margin-top: 20rpx;
+}
+
+.switch {
+  transform: scale(.7);
+}
+
+.button {
+  position: absolute;
+  left: 75px;
+  bottom: 30rpx;
+  width: 225*2rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 8rpx;
+  background-color:#467895;
+  color: rgba(255, 255, 255, 100);
+  font-size: 30rpx;
+  text-align: center;
+}

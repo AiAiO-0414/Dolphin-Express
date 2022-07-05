@@ -1,2 +1,12 @@
-<!--pages/coupon/coupon.wxml-->
-<text>pages/coupon/coupon.wxml</text>
+<view class="couponcontainer">
+  <view class="head"></view>
+  <view class="img" bindtap="couponinfo">
+    <image class="imgsize" mode="aspectFill" src="/assets/images/coupon1.png"></image>
+  </view>
+  <view class="img">
+    <image class="imgsize" mode="aspectFit" src="/assets/images/coupon2.png"></image>
+  </view>
+  <view class="img">
+    <image class="imgsize" mode="aspectFill" src="/assets/images/coupon3.png"></image>
+  </view>
+</view>

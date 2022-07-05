@@ -1,0 +1,72 @@
+@import 'assets/css/common.scss';
+
+.costcontainer {
+  box-sizing: border-box;
+
+  .img {
+    width: 375*2rpx;
+    height: 566*2rpx;
+  }
+
+  .text {
+    font-size: 40rpx;
+    color: #101010 100%;
+    font-weight: 600;
+    padding: 30rpx;
+  }
+
+  .costbox {
+    line-height: 80rpx;
+    font-size: 32rpx;
+    text-align: center;
+
+    .right {
+      width: 154*2rpx;
+      height: 86*2rpx;
+      background-color: #89c3f6;
+      color: rgba(16, 16, 16, 100);
+      border-radius: 28rpx;
+      box-shadow: 2rpx 6rpx 14rpx 4rpx rgba(0, 0, 0, 0.4);
+      border: 2rpx solid rgba(187, 187, 187, 100);
+    }
+
+    .left {
+      width: 154*2rpx;
+      height: 86*2rpx;
+      background-color: #89ec9c;
+      color: rgba(10, 172, 41, 100);
+      border-radius: 28rpx;
+      box-shadow: 2rpx 6rpx 14rpx 4rpx rgba(0, 0, 0, 0.4);
+      border: 2rpx solid rgba(187, 187, 187, 100);
+    }
+  }
+
+  .volumebox {
+    width: 333*2rpx;
+    height: 86*2rpx;
+    line-height: 86rpx;
+    border-radius: 28rpx;
+    background-color: #90aef6;
+    color: rgba(16, 16, 16, 100);
+    font-size: 32rpx;
+    text-align: center;
+    box-shadow: 0 6rpx 14rpx 4rpx rgba(0, 0, 0, 0.4);
+    border: 1rpx solid rgba(187, 187, 187, 100);
+    margin-top: 45rpx;
+    margin-left: 40rpx;
+  }
+
+  .estimatebox {
+    width: 333*2rpx;
+    height: 86*2rpx;
+    line-height: 86rpx;
+    border-radius: 28rpx;
+    background-color: rgba(11, 115, 247, 100);
+    color: #ffffff;
+    font-size: 32rpx;
+    text-align: center;
+    box-shadow: 0px 6rpx 14rpx 4rpx rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(187, 187, 187, 100);
+    margin: 45rpx 0 80rpx 40rpx;
+  }
+}

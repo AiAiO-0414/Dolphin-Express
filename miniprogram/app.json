@@ -4,8 +4,14 @@
     "pages/order/order",
     "pages/coupon/coupon",
     "pages/users/users",
-    "pages/address/address",
-    "pages/selectAddress/selectAddress"
+    "pages/AddressItem/address/address",
+    "pages/AddressItem/selectAddress/selectAddress",
+    "pages/AddressItem/AddAddress/AddAddress",
+    "pages/AddressItem/CopyInfo/copyinfo",
+    "pages/cost/cost",
+    "pages/notice/notice",
+    "pages/process/process",
+    "pages/couponInfo/couponInfo"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -36,7 +42,7 @@
       },
       {
         "pagePath": "pages/users/users",
-        "text": "订单",
+        "text": "我的",
         "iconPath": "/assets/images/user.png",
         "selectedIconPath": "/assets/images/user_select.png"
       }
@@ -46,7 +52,9 @@
     "van-dialog": "@vant/weapp/dialog/index",
     "van-notice-bar": "@vant/weapp/notice-bar/index",
     "van-icon": "@vant/weapp/icon/index",
-    "van-field": "@vant/weapp/field/index"
+    "van-field": "@vant/weapp/field/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-tag": "@vant/weapp/tag/index"
   },
   "sitemapLocation": "sitemap.json"
 }

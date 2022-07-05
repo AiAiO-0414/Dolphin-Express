@@ -18,11 +18,17 @@ Page({
       key: 'isselect',
     })
   },
+  //添加地址
+  addbutton(){
+    wx.navigateTo({
+      url:'/pages/AddressItem/AddAddress/AddAddress'
+    })
+  },
   //地址回显
   assignment() {
+    let result = encodeURIComponent(JSON.stringify(this.data.userInfo)) 
     wx.navigateTo({
-      url: '/pages/address/address?userinfo=' + this.data.userInfo,
-      events: this.data
+      url: '/pages/AddressItem/address/address?userinfo='+result,
     })
   },
   telreg() {

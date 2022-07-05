@@ -1,0 +1,41 @@
+<view class="container">
+  <view class="addresscontainer">
+    <view class="flex">
+      <view class="img">
+        <image class="imgsize" mode="aspectFit" src="/assets/images/address.png" alt="" />
+      </view>
+      <view class="text">仓库地址</view>
+    </view>
+    <view>
+      <view class="flex" wx:for="{{itemInfo}}" wx:key="id">
+        <view class="text1">{{item.label}}</view>
+        <view class="text2">{{item.info}}</view>
+        <!-- <view class="address"></view>ss -->
+      </view>
+      <!-- <view class="flex">
+        <text class="text1">收货地址：</text>
+        <text>深圳市龙华区观澜街道银星科技园第三期A区B座1077室</text>
+      </view>
+      <view class="flex">
+        <text>手机号码：</text>
+        <text>15815140424</text>
+      </view>
+      <view class="flex">
+        <text>邮政编码：</text>
+        <text>515134</text>
+      </view> -->
+    </view>
+  </view>
+  <view class="copybtn" bindtap="copyinfo">一键复制仓库地址信息</view>
+  <view class="info">
+    <view class="text1"> 第一步将包裹寄到河马转运仓</view>
+    <view class="text2">复制以上收件人信息并添加到淘宝等网购平台，以河马转运为收货人ID号作为包裹识别归属的主要途
+      径，请务必作为收件人信息的一部分完整保留;</view>
+    <view class="text1"> 第二步报备包裹国内快递单号</view>
+    <view class="text2">快递寄出后将国内快递单号添加至河马转运，因国内部分快递公司会隐藏ID号，请自主添加单号备，以免被识别为无名包事造成不必要的损失:</view>
+    <view class="text1"> 第三步提交打包</view>
+    <view class="text2">包裹入库验货后，选择你要寄送的包事提交打包并选择线路渠道，打包时间通常为当天提交次日18:00前完成打包;</view>
+    <view class="text1"> 第四步支付运费</view>
+    <view class="text2">打包完成后确认重量与运费明细，完成支付后当日出库提交转运</view>
+  </view>
+</view>

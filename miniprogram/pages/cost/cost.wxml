@@ -1,0 +1,24 @@
+<view class="costcontainer">
+  <view class="img">
+    <image class="imgsize" mode="aspectFill" src="/assets/images/cost.png"></image>
+  </view>
+  <view class="text">运费估算</view>
+  <view class="flex_a_c costbox">
+    <view class="right">
+      <view>装运渠道</view>
+      <view>普通货物</view>
+    </view>
+    <view class="left">
+      <view>装运渠道</view>
+      <view>普通货物</view>
+    </view>
+  </view>
+  <view class="volumebox">
+  <view>预估体积</view>
+  <view>请输入长宽高</view>
+  </view>
+  <view class="estimatebox">
+  <view>预估运费（实际结果以订单为准</view>
+  <view>¥ 0.00</view>
+  </view>
+</view>

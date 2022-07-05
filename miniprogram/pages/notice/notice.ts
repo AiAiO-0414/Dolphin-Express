@@ -1,20 +1,23 @@
-// pages/address/address.ts
+// pages/notice/notice.ts
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    phoneNumber:''
+
+  },
+  read(){
+    wx.navigateTo({
+      url:'/pages/process/process'
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad() {
-    this.setData({
-    phoneNumber: this.options.phonenumber
-    })
+
   },
 
   /**
