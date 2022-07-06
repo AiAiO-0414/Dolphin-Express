@@ -1,0 +1,36 @@
+.couponcontainer {
+  box-sizing: border-box;
+  padding: 60rpx 15rpx 0 15rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  position: absolute;
+  bottom: 35rpx;
+  width: 176*2rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  border-radius: 8rpx;
+  background-color: #ffb648;
+  color: rgba(255, 255, 255, 100);
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.dialog {
+  width: 252*2rpx;
+  height: 60rpx;
+  border-radius: 18rpx;
+  color: rgba(136, 136, 136, 100);
+  font-size: 24rpx;
+  border: 1px solid rgba(187, 187, 187, 100);
+  margin: 30rpx 0 30rpx 60rpx;
+  padding: 5rpx;
+  input {
+    width: 252*2rpx;
+    height: 60rpx;
+  }
+}

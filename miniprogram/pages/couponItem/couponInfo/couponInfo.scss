@@ -7,11 +7,15 @@
   border-radius: 12rpx;
   background-color: rgba(255, 255, 255, 100);
   text-align: center;
-  border-right: dashed 2px #fab8a9;
+  border-bottom: dashed 2px #fab8a9;
   box-sizing: border-box;
 
   .price {
     width: 240rpx;
+    height: 150rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     border-right: dashed 2px #fab8a9;
 
     .text1 {
@@ -26,6 +30,15 @@
 
   .right {
     font-size: 26rpx;
+    height: 150rpx;
+    line-height: 60rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .toptext {
+      display: flex;
+    }
 
     .text1 {
       margin-left: 10rpx;
@@ -46,9 +59,12 @@
         height: 42rpx;
         line-height: 42rpx;
         border-radius: 34rpx;
-        background-color: rgba(246, 57, 13, 100);
+        background-color:#f2826a;
         text-align: center;
         color: #ffffff;
+        margin-top: 11rpx;
+        margin-left: 15rpx;
+
         text {
           font-size: 24rpx;
         }
@@ -56,5 +72,31 @@
     }
 
   }
+}
 
+.all {
+  width: 555rpx;
+  margin-top: 15rpx;
+  font-size: 24rpx;
+}
+
+.usenotice {
+  margin-top: 60rpx;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  .use {
+    text-align: left;
+    font-size: 40rpx;
+  }
+  .time {
+    margin:25rpx 0 0 0;
+  }
+  .noticetext {
+    line-height: 48rpx;
+    margin:60rpx 0 60rpx 0;
+  }
+
+  .rule {
+    line-height: 50rpx;
+  }
 }

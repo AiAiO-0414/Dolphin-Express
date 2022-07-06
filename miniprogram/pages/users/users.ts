@@ -26,5 +26,10 @@ Page({
     wx.navigateTo({
       url:'/pages/AddressItem/selectAddress/selectAddress'
     })
+  },
+  mycoupon(){
+    wx.navigateTo({
+      url:'/pages/couponItem/mycoupon/mycoupon'
+    })
   }
 })

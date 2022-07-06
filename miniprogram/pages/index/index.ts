@@ -25,10 +25,13 @@ Page({
   channel(e:any) {
     let curindex = e.currentTarget.dataset.index;
     this.setData({
-      // curindex:curindex,
       key:curindex
     })
-    console.log(this.data.key);
+    let channeltext = this.data.channeltext[curindex].textItem;
+    wx.setStorage({
+      data: { 'channeltext': channeltext },
+      key: 'channeltext',
+    })
   },
   yesbutton() {
     wx.navigateTo({
@@ -55,5 +58,6 @@ Page({
     wx.navigateTo({
       url:'/pages/notice/notice'
     })
-  }
+  },
+  
 })

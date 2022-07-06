@@ -11,7 +11,10 @@
     "pages/cost/cost",
     "pages/notice/notice",
     "pages/process/process",
-    "pages/couponInfo/couponInfo"
+    "pages/couponItem/couponInfo/couponInfo",
+    "pages/couponItem/mycoupon/mycoupon",
+    "pages/AddressItem/CityList/CityList",
+    "Components/couponlist/NotExpiredCoupon/NotExpiredCoupon"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -21,6 +24,7 @@
     "backgroundColorTop": "black"
   },
   "tabBar": {
+    "selectedColor": "#467895",
     "list": [
       {
         "pagePath": "pages/index/index",
@@ -54,7 +58,12 @@
     "van-icon": "@vant/weapp/icon/index",
     "van-field": "@vant/weapp/field/index",
     "van-divider": "@vant/weapp/divider/index",
-    "van-tag": "@vant/weapp/tag/index"
+    "van-tag": "@vant/weapp/tag/index",
+    "van-index-bar": "@vant/weapp/index-bar/index",
+    "van-index-anchor": "@vant/weapp/index-anchor/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index"
   },
   "sitemapLocation": "sitemap.json"
 }

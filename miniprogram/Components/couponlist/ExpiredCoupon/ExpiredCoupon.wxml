@@ -1,0 +1,31 @@
+<!-- <view class="container"> -->
+<view class="coupon flex_a">
+  <view>
+    <view class="img">
+      <image class="imgsize" mode="aspectFill" src="/assets/images/coupon7.png"></image>
+    </view>
+    <view class="price">
+      <view style="display: flex;">
+        <view class="num">15</view>
+        <view class="text2">元</view>
+      </view>
+      <view>满100元使用</view>
+    </view>
+  </view>
+  <view class="text">
+    <view>新品优惠券</view>
+    <view class="time">2020.10.10 - 2020.11.11</view>
+    <view class="imgicon">
+      <image class="imgsize" mode="aspectFill" src="/assets/images/coupon10.png"></image>
+    </view>
+  </view>
+  <view class="img2">
+    <image class="imgsize" mode="aspectFill" src="/assets/images/coupon9.png"></image>
+  </view>
+  <view class="discount">
+    <view class="discount1">抵</view>
+    <view class="discount2">扣</view>
+    <view class="discount3">券</view>
+  </view>
+</view>
+<!-- </view> -->

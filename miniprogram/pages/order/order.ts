@@ -1,16 +1,56 @@
 // pages/order/order.ts
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    active: 0,
+    ordernum: '202207062104200302244',
+    tabstatus: [
+      { status: "all", title: "全部" },
+      { status: "0", title: "待支付" },
+      { status: "1", title: "已支付" },
+      { status: "2", title: "已完成" },
+    ],
+    cardata: [
+      { id: 1, TargetCity: '美国', statusText: '待入仓', status: "1", },
+      { id: 2, TargetCity: '英国', statusText: '待拣货', status: "2", },
+      { id: 3, TargetCity: '丹麦', statusText: '待出仓', status: "1", },
+      { id: 4, TargetCity: '法国', statusText: '待支付', status: "0", },
+      { id: 5, TargetCity: '德国', statusText: '待支付', status: "0", },
+      { id: 6, TargetCity: '荷兰', statusText: '待入仓', status: "1", },
+      { id: 7, TargetCity: '荷兰', statusText: '已出仓', status: "3", },
+    ],
+    // payData:[
+    //   { id: 4, TargetCity: '法国', statusText: '待支付' },
+    //   { id: 5, TargetCity: '德国', statusText: '待支付' },
+    // ],
+    // warehousedData:[
+    //   { id: 1, TargetCity: '美国', statusText: '待入仓' },
+    //   { id: 6, TargetCity: '荷兰', statusText: '待入仓' },
+    // ]
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
+  onChange(event: any) {
+    console.log(event);
+    let result = this.data.cardata.filter((item: any) => {
+      if (item.status == event.detail.name) {
+        return item
+      }
+    })
+    console.log(result);
+    this.setData({
+      cardata:result
+    })
+    // if(event.name == this.setData.){}
+  },
+  copyorder() {
+    wx.setClipboardData({
+      data: this.data.ordernum,
+      success() {
+        wx.showToast({
+          title: '复制成功',
+        })
+      }
+    })
+  },
   onLoad() {
 
   },

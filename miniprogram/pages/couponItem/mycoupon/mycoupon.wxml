@@ -1,0 +1,12 @@
+<view class="couponcontainer">
+  <NotExpiredCoupon></NotExpiredCoupon>
+  <UsedCoupon></UsedCoupon>
+  <ExpiredCoupon></ExpiredCoupon>
+  <view class="btn" bindtap="exchangebtn">兑换优惠券</view>
+  <van-dialog use-slot title="兑换优惠卷" confirmButtonText="领取" 
+  confirmButtonColor="#ffb648" show="{{isshow}}" show-cancel-button bind:close="onClose" bind:confirm="receivebtn">
+    <view class="flex_b_c dialog">
+      <input placeholder="请输入优惠券code,进行兑换" type="text" value="" />
+    </view>
+  </van-dialog>
+</view>

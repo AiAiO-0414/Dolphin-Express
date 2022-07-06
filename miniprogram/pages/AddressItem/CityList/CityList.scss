@@ -1,0 +1,25 @@
+@import 'assets/css/common.scss';
+
+.flexbox {
+  width: 650rpx;
+  margin-left: 32rpx;
+}
+.flex {
+display: flex;
+flex-direction: column;
+width: 200rpx;
+line-height: 90rpx;
+}
+.text2 {
+  width: 220rpx;
+  text-align:right;
+}
+.text {
+  display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+}
+van-cell{
+  width: 375*2rpx;
+  height: 80rpx;
+}

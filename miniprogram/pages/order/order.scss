@@ -1,1 +1,79 @@
-/* pages/order/order.wxss */
+@import 'assets/css/common.scss';
+
+.card {
+  position: relative;
+  width: 347*2rpx;
+  height: 163*2rpx;
+  line-height: 40rpx;
+  background-color: rgba(255, 255, 255, 79);
+  color: rgba(16, 16, 16, 100);
+  font-size: 28rpx;
+  box-shadow: 0px 4rpx 20rpx 0px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 100);
+  box-sizing: border-box;
+  padding: 20rpx;
+  margin:30rpx 0 30rpx 28rpx;
+}
+
+.copy {
+  display: inline-block;
+  width: 45rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  border-radius: 8rpx;
+  background-color: rgba(217, 241, 221, 100);
+  color: rgba(64, 184, 80, 100);
+  font-size: 20rpx;
+  border: 1px solid rgba(217, 241, 221, 100);
+  margin-left: 20rpx;
+}
+
+.address {
+  font-size: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 38rpx;
+  box-sizing: border-box;
+}
+
+.text {
+  font-size: 28rpx;
+  color: #4c168e;
+}
+
+.img {
+  width: 64rpx;
+  height: 64rpx;
+}
+
+.btn {
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 20rpx;
+}
+
+.btnstyle {
+  width: 160rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 8rpx;
+  background-color: rgba(255, 255, 255, 100);
+  color: rgba(236, 6, 6, 100);
+  font-size: 28rpx;
+  text-align: center;
+  border: 1px solid rgba(236, 6, 6, 100);
+  margin: 0 10rpx 0 10rpx;
+}
+
+.detail {
+  color: #ffffff;
+  border: 1px solid #467895;
+  background: #467895;
+}
+
+.pay {
+  border: 1px solid #8ad394;
+  color: #8ad394;
+}

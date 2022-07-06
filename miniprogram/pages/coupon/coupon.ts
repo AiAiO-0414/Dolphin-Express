@@ -8,7 +8,7 @@ Page({
   },
   couponinfo(){
     wx.navigateTo({
-      url:'/pages/couponInfo/couponInfo'
+      url:'/pages/couponItem/couponInfo/couponInfo'
     })
   }
 })

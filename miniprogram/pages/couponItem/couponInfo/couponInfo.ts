@@ -5,7 +5,29 @@ Page({
    * 页面的初始数据
    */
   data: {
+    isshow:'none',
+    isopen:'',
+  },
 
+  ishide() {
+    console.log(11);
+    this.setData({
+      isshow:'none',
+      isopen:''
+    })
+  },
+
+  isopen(){
+    this.setData({
+      isshow:'',
+      isopen:'none'
+    })
+  },
+
+  receivebtn(){
+    wx.navigateTo({
+      url:'/pages/couponItem/mycoupon/mycoupon'
+    })
   },
 
   /**

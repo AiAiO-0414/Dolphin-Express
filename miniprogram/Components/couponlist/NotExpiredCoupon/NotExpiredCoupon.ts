@@ -1,22 +1,18 @@
-// pages/cost/cost.ts
+// Components/couponlist/NotExpiredCoupon/NotExpiredCoupon.ts
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    channel:''
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(){
-    let radiostatus = wx.getStorageSync('channeltext').channeltext;
-    console.log(radiostatus,'r');
-    this.setData({
-      channel:radiostatus
-    })
+  onLoad() {
+
   },
 
   /**

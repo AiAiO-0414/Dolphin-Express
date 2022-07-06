@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "NotExpiredCoupon": "/Components/couponlist/NotExpiredCoupon/NotExpiredCoupon",
+    "ExpiredCoupon":"/Components/couponlist/ExpiredCoupon/ExpiredCoupon",
+    "UsedCoupon":"/Components/couponlist/UsedCoupon/UsedCoupon"
+  },
+  "navigationBarBackgroundColor": "#ffb648"
+}

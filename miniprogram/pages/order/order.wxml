@@ -1,2 +1,27 @@
-<!--pages/order/order.wxml-->
-<text>pages/order/order.wxml</text>
+<view class="OrderContainer">
+  <van-tabs bind:change="onChange" color="#467895" style="width: 375px;" active="{{ active }}" bind:change="onChange">
+    <view class="flex">
+      <van-tab wx:for="{{tabstatus}}" title="{{item.title}}">
+        <view class="card" wx:for="{{cardata}}">
+          <view class="ordernum">订单号：{{ordernum}}<text class="copy" bindtap="copyorder">复制</text></view>
+          <view class="address">
+            <view>中国</view>
+            <view>
+              <view class="img">
+                <image class="imgsize" mode="aspectFill" src="/assets/images/fly2.png"></image>
+              </view>
+              <view class="text">{{item.statusText}}</view>
+            </view>
+            <view>{{item.TargetCity}}</view>
+          </view>
+          <view class="btn">
+            <view wx:if="{{item.status=='all' || item.status==1}}" class="btnstyle pack">确认打包</view>
+            <view wx:if="{{item.status==1 || item.status==2}}"  class="btnstyle detail">详情</view>
+            <view wx:if="{{item.status== 0}}"  class="btnstyle pay">去支付</view>
+            <view wx:if="{{item.status==2}}"  class="btnstyle express">物流详情</view>
+          </view>
+        </view>
+      </van-tab>
+    </view>
+  </van-tabs>
+</view>

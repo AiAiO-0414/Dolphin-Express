@@ -1,0 +1,93 @@
+@import 'assets/css/common.scss';
+
+.coupon {
+  position: relative;
+  width: 362*2rpx;
+  height: 200rpx;
+  line-height: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 100);
+  text-align: center;
+  box-shadow: 0px 0px 6px 0px rgba(255, 247, 230, 100);
+  margin-bottom: 60rpx;
+
+  .img {
+    width: 134*2rpx;
+    height: 200rpx;
+  }
+
+  .price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    left: 49rpx;
+    top: 50rpx;
+    font-size: 28rpx;
+    color: #FFFFFF;
+
+    .num {
+      font-size: 84rpx;
+      margin-bottom: 50rpx;
+      font-size: 700;
+    }
+
+    .text2 {
+      margin: 22rpx 0 0 6rpx;
+    }
+  }
+
+  .price2 {
+    top: 345rpx;
+  }
+
+  .text {
+    color: #5A5A5A;
+    font-size: 36rpx;
+    text-align: left;
+    line-height: 80rpx;
+    margin-left: 30rpx;
+    font-weight: 700;
+
+    .time {
+      color: #BFBFBF;
+      font-size: 28rpx;
+    }
+  }
+
+  .img2 {
+    position: absolute;
+    left: 295*2rpx;
+    top: 0px;
+    width: 138rpx;
+    height: 138rpx;
+  }
+
+  .discount {
+    font-size: 26rpx;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-align: left;
+
+    .discount1 {
+      transform: rotate(51deg);
+      position: absolute;
+      left: 644rpx;
+      top: 16rpx;
+    }
+
+    .discount2 {
+      position: absolute;
+      left: 663rpx;
+      top: 37rpx;
+      transform: rotate(50deg);
+    }
+
+    .discount3 {
+      position: absolute;
+      left: 681rpx;
+      top: 55rpx;
+      transform: rotate(46deg);
+    }
+  }
+}

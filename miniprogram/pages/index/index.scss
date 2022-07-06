@@ -61,16 +61,16 @@
 
     .button {
       position: absolute;
-      left: 65px;
-      top: 120px;
-      width: 162px;
-      height: 38px;
-      border-radius: 4px;
-      background-color: rgba(78, 20, 140, 100);
+      left: 150rpx;
+      top: 120*2rpx;
+      width: 162*2rpx;
+      height: 38*2rpx;
+      border-radius: 8rpx;
+      background-color: #467895;
       color: rgba(255, 255, 255, 100);
-      font-size: 18px;
+      font-size: 36rpx;
       text-align: center;
-      line-height: 38px;
+      line-height: 38*2rpx;
     }
 
     van-dialog {
@@ -243,7 +243,7 @@
       width: 330*2rpx;
       height: 40*2rpx;
       border-radius: 19*2rpx;
-      background-color: #4c168e;
+      background-color: #467895;
       color: #fff;
       font-size: 16*2rpx;
       text-align: center;
@@ -251,7 +251,7 @@
     }
 
     .copytext2 {
-      color: #4C168E;
+      color: #467895;
       text-align: center;
       font-size: 14*2rpx;
     }

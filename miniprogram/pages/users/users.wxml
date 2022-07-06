@@ -47,7 +47,7 @@
       <view >我的地址</view>
       <van-icon name="arrow" color="#ccc" />
     </view>
-    <view class="flex_b_c addressitem">
+    <view bindtap="mycoupon" class="flex_b_c addressitem">
       <view>我的优惠卷</view>
       <van-icon name="arrow" color="#ccc" />
     </view>

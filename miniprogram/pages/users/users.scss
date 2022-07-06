@@ -77,13 +77,11 @@
     border-radius: 50rpx;
   }
 
-  .address {
-    left: 8px;
-    top: 366px;
-    width: 360px;
-    height: 301px;
-    line-height: 20px;
-    border-radius: 11px 11px 11px 11px;
+  .address { 
+    width: 360*2rpx;
+    height: 301*2rpx;
+    line-height: 40rpx;
+    border-radius: 22rpx 22rpx 22rpx 22rpx;
     background-color: rgba(255, 255, 255, 100);
     text-align: center;
     box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.4);
