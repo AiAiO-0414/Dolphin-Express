@@ -1,0 +1,29 @@
+<view class="numcontainer">
+  <van-notice-bar color="#dd001b" background="#fff" left-icon="info-o" text="快递全部到齐点击确认打包后，订单不可修改" />
+  <view class="flex_b_c num">
+    <view class="text"><text class="icon">*</text>快递个数</view>
+    <input bindblur="getnum" placeholder="请输入(输入后弹出快递单号位置)" type="text" disabled="{{isdisabled}}" />
+  </view>
+  <view class="remarks">
+    <textarea placeholder="备注信息，例如：去掉包装盒等" name="" id=""></textarea>
+  </view>
+  <view class="flex__c inputbox" wx:for="{{index}}" wx:key="item">
+    <text class="index">{{item+1}}</text>
+    <input data-index="{{index}}" name="{{item}}" bindblur="getordernum" class="input" placeholder="请输入订单号" type="text" />
+    <view bindtap="delete">
+      <van-icon class="del" name="delete-o" />
+    </view>
+    <view class="warehoused">待入仓</view>
+  </view>
+  <view class="btn" bindtap="addbtn">+ 补充快递单号</view>
+</view>
+<van-dialog use-slot title="请确认快递单号是否无误" show="{{ isshow }}" show-cancel-button bind:close="onClose" bind:confirm="yesbutton">
+  <view class="dialogtext">请确认快递单号【test12346】是否无误，
+    一旦提交，不可修改。</view>
+</van-dialog>
+<van-dialog use-slot title="是否增加快递单号？" show="{{ show }}" show-cancel-button bind:close="onClose" bind:confirm="addinput"
+confirmButtonColor="#78cd83"	
+>
+  <view class="dialogtext">增加快递单号后，发往转运中心的
+快递个数+1。是否要继续？</view>
+</van-dialog>

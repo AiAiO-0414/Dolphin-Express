@@ -1,0 +1,12 @@
+<view class="container">
+  <OrderAddress></OrderAddress>
+  <OrderDataDetail></OrderDataDetail>
+  <OrderNum></OrderNum>
+  <OrderStatus></OrderStatus>
+  <view class="flex_b_c">
+    <view class="btn server">联系客服</view>
+    <view class="btn order">取消订单</view>
+  </view>
+
+
+</view>

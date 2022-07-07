@@ -10,7 +10,7 @@
     </view>
     <view class="left">
       <view>装运渠道</view>
-      <view>普通货物</view>
+      <view>{{channel}}</view>
     </view>
   </view>
   <view class="volumebox">

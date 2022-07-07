@@ -16,17 +16,32 @@
     margin-left: 30rpx;
   }
 
-  .button {
-    width: 187*2rpx;
-    height: 82rpx;
-    line-height: 82rpx;
-    border-radius: 8rpx;
-    background-color: #467895;
-    color: rgba(255, 255, 255, 100);
-    font-size: 36rpx;
-    text-align: center;
-    margin-top: 120rpx;
-    margin-left: 152rpx;
-    margin-bottom: 40rpx;
+  .btnbox {
+    position: relative;
+
+    .button {
+      position: relative;
+      width: 187*2rpx;
+      height: 82rpx;
+      line-height: 82rpx;
+      border-radius: 8rpx;
+      background-color: #467895;
+      color: rgba(255, 255, 255, 100);
+      font-size: 36rpx;
+      text-align: center;
+      margin-top: 120rpx;
+      margin-left: 152rpx;
+      margin-bottom: 40rpx;
+      // display: flex;
+    }
+
+    .item {
+      position: absolute;
+      right: 125px;
+      top: 23rpx;
+      display: flex;
+      font-size: 40rpx;
+      color: #ffffff;
+    }
   }
 }

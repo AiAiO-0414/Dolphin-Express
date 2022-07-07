@@ -1,31 +1,16 @@
-// pages/notice/notice.ts
+// pages/payDetail/payDetail.ts
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    time: 5 * 1000,
-    timeData: {},
-    isdisabled: true
-  },
-  onChange(e: any) {
-    this.setData({
-      timeData: e.detail,
-    });
-  },
-
-  onfinish() {
-    this.setData({
-      isdisabled: false,
-      timeData: '',
-    })
-  },
-
-  read() {
-    wx.navigateTo({
-      url: '/pages/process/process'
-    })
+    paydata:[
+      {title:'订单号',value:'20220509140712345678'},
+      {title:'转运线路',value:'中国-美国'},
+      {title:'预选渠道',value:'普通货物'},
+      {title:'货物属性',value:'普通货物'},
+      {title:'转运费',value:'￥138.00'},
+      {title:'附加费',value:'￥38.00'},
+      {title:'丢失险',value:'￥0.00'},
+      {title:'关税险',value:'￥0.00'},
+  ]
   },
 
   /**

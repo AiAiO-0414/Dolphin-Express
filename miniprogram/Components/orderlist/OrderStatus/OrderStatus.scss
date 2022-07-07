@@ -1,0 +1,43 @@
+@import 'assets/css/common.scss';
+
+.statuscontainer {
+  width: 347*2rpx;
+  height: 172*2rpx;
+  line-height: 66rpx;
+  opacity: 0.85;
+  border-radius: 6rpx;
+  background-color: rgba(255, 255, 255, 79);
+  color: rgba(16, 16, 16, 100);
+  font-size: 28rpx;
+  box-shadow: 0px 4rpx 20rpx 0px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 100);
+  margin-top: 30rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.order {
+  // margin-bottom: 15rpx;
+  color: #101010;
+  // font-weight: 600;
+  font-size: 30rpx;
+}
+
+
+.copy {
+  width: 48rpx;
+  height: 26rpx;
+  line-height: 26rpx;
+  border-radius: 8rpx;
+  background-color: rgba(217, 241, 221, 100);
+  color: rgba(64, 184, 80, 100);
+  font-size: 14rpx;
+  text-align: center;
+  display: inline-block;
+  margin-left: 25rpx;
+  border: 1px solid rgba(217, 241, 221, 100);
+}
+
+.status {
+  color: rgb(255, 112, 55);
+}

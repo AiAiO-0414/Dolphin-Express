@@ -1,0 +1,120 @@
+@import 'assets/css/common.scss';
+
+.numcontainer {
+  position: relative;
+  width: 347*2rpx;
+  // height: 402*2rpx;
+  line-height: 40rpx;
+  opacity: 0.85;
+  border-radius: 6rpx;
+  background-color: rgba(255, 255, 255, 79);
+  color: rgba(16, 16, 16, 100);
+  font-size: 28rpx;
+  box-shadow: 0 4rpx 20rpx 0 rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 100);
+  margin-top: 40rpx;
+  padding: 15rpx;
+  box-sizing: border-box;
+}
+
+.num {
+  width: 610rpx;
+}
+
+.text {
+  font-size: 36rpx;
+  color: #5c1baa;
+  font-weight: 700;
+}
+
+.icon {
+  //  display: inline-block;
+  margin: 0 15rpx 0 15rpx;
+  font-size: 40rpx;
+  color: rgb(194, 1, 1);
+}
+
+input {
+  width: 400rpx;
+  height: 52rpx;
+  border-radius: 14rpx;
+  color: rgba(136, 136, 136, 100);
+  font-size: 12px;
+  text-align: left;
+  border: 1px solid rgba(187, 187, 187, 100);
+  padding: 0 4rpx 0 4rpx;
+  box-sizing: border-box;
+}
+
+.remarks {
+  width: 560rpx;
+  height: 200rpx;
+  line-height: 34rpx;
+  border-radius: 14rpx;
+  color: rgba(136, 136, 136, 100);
+  font-size: 28rpx;
+  text-align: left;
+  border: 1px solid rgba(187, 187, 187, 100);
+  margin: 25rpx 0 25rpx 47rpx;
+  box-sizing: border-box;
+  padding: 10rpx;
+}
+
+textarea {
+  height: 200rpx;
+}
+
+.inputbox {
+  margin-left: 54rpx;
+  height: 80rpx;
+  position: relative;
+}
+
+.index {
+  font-size: 35rpx;
+  display: inline-block;
+  margin-bottom: 10rpx;
+}
+
+.input {
+  width: 252*2rpx;
+  height: 60rpx;
+  border-radius: 10rpx;
+  color: rgba(136, 136, 136, 100);
+  font-size: 28rpx;
+  text-align: left;
+  border: 1px solid rgba(187, 187, 187, 100);
+  margin: 0 0 15rpx 15rpx;
+}
+
+.del {
+  position: absolute;
+  font-size: 40rpx;
+  top: 15rpx;
+  right: 75rpx;
+  color: #999898;
+}
+
+.btn {
+  width: 222rpx;
+  height: 52rpx;
+  line-height: 52rpx;
+  border-radius: 22rpx;
+  background-color: rgba(255, 255, 255, 100);
+  color: rgba(64, 184, 80, 100);
+  font-size: 24rpx;
+  text-align: center;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(64, 184, 80, 100);
+  margin-left: 390rpx;
+}
+
+.dialogtext {
+  width: 324*2rpx;
+  height: 146rpx;
+  line-height: 46rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  color: rgb(189, 185, 185);
+}
+

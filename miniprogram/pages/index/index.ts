@@ -16,6 +16,7 @@ Page({
       { id: 5, textItem: '广东EMS' }
     ],
     key:0,
+    targetcity:''
   },
   transport() {
     this.setData({
@@ -24,12 +25,13 @@ Page({
   },
   channel(e:any) {
     let curindex = e.currentTarget.dataset.index;
+    let index = wx.getStorageSync('channeltext').curindex;
     this.setData({
-      key:curindex
+      key:index
     })
     let channeltext = this.data.channeltext[curindex].textItem;
     wx.setStorage({
-      data: { 'channeltext': channeltext },
+      data: { 'curindex':curindex,'channeltext': channeltext },
       key: 'channeltext',
     })
   },
@@ -59,5 +61,11 @@ Page({
       url:'/pages/notice/notice'
     })
   },
+  onShow(){
+    let city = wx.getStorageSync('city').city;
+    this.setData({
+      targetcity:city
+    })
+  }
   
 })

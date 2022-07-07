@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "OrderAddress":"/Components/orderlist/OrderAddress/OrderAddress",
+    "OrderNum":"/Components/orderlist/OrderNum/OrderNum",
+    "OrderStatus":"/Components/orderlist/OrderStatus/OrderStatus",
+    "OrderDataDetail":"/Components/orderlist/orderDataDetail/orderDataDetail"
+  }
+  
+}

@@ -10,6 +10,11 @@
     <view>七、由于地址错误引起的包裹丢失责任由客户自行承担:专线渠道提供地址错误二次派件服务，但需支付二次派送费用，退回问题件处理中心客服通知修改地址重新换单派送，拒付按照弃件处理。</view>
     <view>八、如包裹丢失，且未购买“丢失保险”，先退运费，然后赔付实际货值(不超过运费且不超过100美金)，依照《华沙条约》国际标准为最高不超过100美元整(实时汇率人民币赔付)。</view>
     <view class="time">2020-11-02 23:46:48</view>
-    <view class="button" bindtap="read">已阅读</view>
+    <view class="btnbox">
+      <button class="button" bindtap="read" disabled="{{isdisabled}}" style="background:{{isdisabled ? '#ccc' : '#467895'}}">已阅读</button>
+      <van-count-down use-slot time="{{ time }}" bind:change="onChange" bind:finish="onfinish">
+        <text class="item"> {{timeData.seconds }}</text>
+      </van-count-down>
+    </view>
   </view>
 </view>

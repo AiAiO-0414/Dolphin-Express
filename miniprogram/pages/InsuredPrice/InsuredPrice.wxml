@@ -1,0 +1,39 @@
+<view class="container">
+  <view class="pricecontainer">
+    <view>订单号：20220509140712345678</view>
+    <view class="flex__c">
+      <view class="img">
+        <image mode="aspectFill" class="imgsize" src="/assets/images/baojia.png"></image>
+      </view>
+      <view class="text">保价</view>
+    </view>
+    <view class="flex__c">
+      <input class="input" type="text" placeholder="自定义物品价格，请填写真实物品价格" bindblur="onchange" />
+    </view>
+  </view>
+  <view class="pricecontainer" wx:for="{{prcieData}}" wx:key="id">
+    <van-notice-bar class="notice" wrapable color="#EC0606" left-icon="info-o" text="{{item.noticetext}}" />
+    <view class="flex_a_c prcietext">
+      <view>{{item.text}}</view>
+      <switch checked="{{item.status}}"></switch>
+    </view>
+    <view class="prcie">保险费：¥ {{item.prcie}}</view>
+  </view>
+  <view class="flex_b_c">
+    <view class="btn server">联系客服</view>
+    <view class="btn next" bindtap="next">下一步</view>
+  </view>
+  <van-dialog use-slot title="风险告知书" show="{{ isshow }}" 
+  confirmButtonText="承担风险" cancelButtonText="购买保险"
+  show-cancel-button bind:close="onClose" bind:confirm="yesbutton">
+    <view class="flex_b_c dialog">
+      <view>
+        <view>尊敬的客户:</view>
+        <view><text class="dialogtext">您好,</text> 系统识别到您的订单未投保丢失保险，
+          丢件的概率为万分之三，未购买丢失保险发生丢
+          失的赔付原则为:退运费，按照实际货值赔付但不
+          超过运费价值且最高不超过100美元。请悉知。</view>
+      </view>
+    </view>
+  </van-dialog>
+</view>

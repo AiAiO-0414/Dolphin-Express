@@ -17,12 +17,12 @@ Page({
         title: '英国',
         Etitle: 'United Kingdom'
       }],
-      A: [{ id: 1, title: '阿尔巴尼亚', Etitle: 'Albania' },
-      { id: 2, title: '阿尔及利亚', Etitle: 'Algeria' },
-      { id: 3, title: '阿富汗', Etitle: 'Afghanistan' },
-      { id: 4, title: '阿根廷', Etitle: 'Argentina' }],
+      A: [{ title: '阿尔巴尼亚', Etitle: 'Albania' },
+      { title: '阿尔及利亚', Etitle: 'Algeria' },
+      { title: '阿富汗', Etitle: 'Afghanistan' },
+      { title: '阿根廷', Etitle: 'Argentina' }],
       B: [{
-        title: '巴基斯坦2',
+        title: '巴基斯坦',
         Etitle: 'Pakistan'
       }, {
         title: '巴西',
@@ -54,15 +54,20 @@ Page({
 
   },
   //选择国家
-  selectCity(){
-    console.log(111);
+  selectCity(e: any) {
+    let city = e.currentTarget.dataset.text;
+    wx.setStorage({
+      data: { 'city': city },
+      key: 'city',
+    })
+    wx.navigateBack();
   },
   seachcity(e: any) {
     let keyword = e.detail
     let obj = this.data.addresslist
     for (var k in obj) {
       for (var i = 0; i < obj[k].length; i++) {
-        let arr =[]
+        let arr = []
         let result = obj[k][i]
         let a = arr.push(result.title)
         console.log(result);
@@ -71,7 +76,6 @@ Page({
         // })
       }
     }
-
     // let list = arrlist.filter((item: any) => {
 
     //   return item.title.includes(keyword) && item
@@ -81,5 +85,6 @@ Page({
     // console.log(list,'list');/
     // let str = list
     // console.log(str);
-  }
+  },
+
 })

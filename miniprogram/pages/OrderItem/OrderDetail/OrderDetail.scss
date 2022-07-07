@@ -1,0 +1,29 @@
+@import 'assets/css/common.scss';
+.btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 40rpx;
+  color: #ffffff;
+  width: 160px;
+  height: 47px;
+  line-height: 57px;
+  line-height: 20px;
+  background-color: #467895;
+  text-align: center;
+  border: 1px solid #467895;
+  margin-top: 30rpx;
+  border-radius:25px;
+}
+
+.server {
+  margin-right: 15rpx;
+  // position: relative;
+  // left: 0;
+}
+
+.order {
+  margin-left:15rpx;
+  background-color: #dad7d7;
+  border: solid 1px #dad7d7;
+}

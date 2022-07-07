@@ -10,14 +10,15 @@ Page({
       { status: "2", title: "已完成" },
     ],
     cardata: [
-      { id: 1, TargetCity: '美国', statusText: '待入仓', status: "1", },
+      { id: 1, TargetCity: '美国', statusText: '待入仓', status: "all", },
       { id: 2, TargetCity: '英国', statusText: '待拣货', status: "2", },
       { id: 3, TargetCity: '丹麦', statusText: '待出仓', status: "1", },
       { id: 4, TargetCity: '法国', statusText: '待支付', status: "0", },
       { id: 5, TargetCity: '德国', statusText: '待支付', status: "0", },
       { id: 6, TargetCity: '荷兰', statusText: '待入仓', status: "1", },
-      { id: 7, TargetCity: '荷兰', statusText: '已出仓', status: "3", },
+      { id: 7, TargetCity: '荷兰', statusText: '已出仓', status: "all", },
     ],
+    newOrder:<any>[]
     // payData:[
     //   { id: 4, TargetCity: '法国', statusText: '待支付' },
     //   { id: 5, TargetCity: '德国', statusText: '待支付' },
@@ -29,17 +30,17 @@ Page({
   },
 
   onChange(event: any) {
-    console.log(event);
-    let result = this.data.cardata.filter((item: any) => {
-      if (item.status == event.detail.name) {
-        return item
-      }
-    })
-    console.log(result);
+    let newOrder;
+    if (event.detail.name == "all") {
+        newOrder = this.data.cardata
+    } else {
+      newOrder = this.data.cardata.filter((item: any) => {
+        return item.status == event.detail.name && item
+      }) 
+    }
     this.setData({
-      cardata:result
+      newOrder,
     })
-    // if(event.name == this.setData.){}
   },
   copyorder() {
     wx.setClipboardData({
@@ -52,7 +53,7 @@ Page({
     })
   },
   onLoad() {
-
+      
   },
 
   /**
@@ -66,14 +67,16 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    this.setData({
+      newOrder:this.data.cardata
+    })
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide() {
-
+    
   },
 
   /**

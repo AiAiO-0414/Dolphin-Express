@@ -1,14 +1,14 @@
 <view class="citylistcontainer">
   <van-search bind:change="seachcity" value="{{ value }}" placeholder="请输入搜索关键词" />
   <van-index-bar index-list="{{indexList}}" >
-    <view wx:for="{{indexList}}" wx:for-item="key">
+    <view wx:for="{{indexList}}" wx:key="key" wx:for-item="key">
       <van-index-anchor index="{{key}}" />
       <view class="flex_b_c flexbox">
         <view class="flex">
-          <view class="text1" bindtap="selectCity" wx:for="{{addresslist[key]}}">{{item.title}}</view>
+          <view class="text1" bindtap="selectCity" data-text="{{item.title}}" wx:for="{{addresslist[key]}}" wx:key="id">{{item.title}}</view>
         </view>
         <view class="flex text2">
-          <view  wx:for="{{addresslist[key]}}">{{item.Etitle}}</view>
+          <view  wx:for="{{addresslist[key]}}" wx:key="id">{{item.Etitle}}</view>
         </view>
       </view>
     </view>

@@ -6,6 +6,12 @@
     <view>第三步:进入小程序订单页面进入订单详情查询物流信息，根据物流单号也可前往公众号“橙子转运”进行物流信息的实时信息查询;</view>
     <view>第四步:收到货品及时查验后再进行签收，签收完成后表示订单已完成;</view>
     <view class="time"> 2020-11-02 23:46:48</view>
-    <view class="button">已阅读</view>
+    <view class="btnbox">
+      <button class="button" bindtap="read" disabled="{{isdisabled}}" style="background:{{isdisabled ? '#ccc' : '#467895'}}" bindtap="read">已阅读</button>
+      <van-count-down use-slot time="{{ time }}" bind:change="onChange" bind:finish="onfinish">
+        <text class="item"> {{timeData.seconds }}</text>
+      </van-count-down>
+    </view>
+
   </view>
 </view>

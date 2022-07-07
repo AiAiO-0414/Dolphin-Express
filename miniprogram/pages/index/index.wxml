@@ -16,7 +16,7 @@
       <view class="flyicon">
         <image class="imgsize" mode="aspectFit" src="../../assets/images/fly.png" alt="" />
       </view>
-      <navigator open-type="navigate" url="/pages/AddressItem/CityList/CityList">美国</navigator>
+      <navigator open-type="navigate" url="/pages/AddressItem/CityList/CityList">{{targetcity}}</navigator>
       <van-dialog use-slot title="预选渠道" show="{{ show }}" show-cancel-button bind:close="onClose" bind:confirm="yesbutton">
         <view class="flex_b_c dialog">
           <view data-index="{{index}}" class="dialogtext" wx:for="{{channeltext}}" wx:key="id" bindtap="channel" style="background:{{key === index ? '#467895' : ''}};color:{{key === index ? '#fff' : ''}}">{{item.textItem}}</view>
