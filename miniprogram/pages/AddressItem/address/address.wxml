@@ -1,5 +1,5 @@
 <!--pages/address/address.wxml-->
 <view class="container">
   <Address></Address>
-  <ReceiveAddress addressData='{{addressData}}'></ReceiveAddress>
+  <ReceiveAddress binddabaisha="submitform" addressData='{{addressData}}'></ReceiveAddress>
 </view>

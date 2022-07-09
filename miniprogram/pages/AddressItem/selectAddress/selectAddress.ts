@@ -4,9 +4,9 @@ Page({
     isselect: false,
     radiostatus: false,
     userInfo: [
-      {
-        username: 'AiAiO', address: 'MEGASYSTEMS INC 799 E DRAGRAM SUITE 5ATUCSON,AZ 85705 USA', phoneNumber: '15815140424'
-      }
+      // {
+      //   username: 'AiAiO', address: 'MEGASYSTEMS INC 799 E DRAGRAM SUITE 5ATUCSON,AZ 85705 USA', phoneNumber: '15815140424', city: 'Denmark', PostCode: '515134'
+      // }
     ]
   },
   status() {
@@ -19,16 +19,16 @@ Page({
     })
   },
   //添加地址
-  addbutton(){
+  addbutton() {
     wx.navigateTo({
-      url:'/pages/AddressItem/AddAddress/AddAddress'
+      url: '/pages/AddressItem/AddAddress/AddAddress'
     })
   },
   //地址回显
   assignment() {
-    let result = encodeURIComponent(JSON.stringify(this.data.userInfo)) 
+    let result = encodeURIComponent(JSON.stringify(this.data.userInfo))
     wx.navigateTo({
-      url: '/pages/AddressItem/address/address?userinfo='+result,
+      url: '/pages/AddressItem/address/address?userinfo=' + result,
     })
   },
   telreg() {
@@ -41,7 +41,7 @@ Page({
     })
     console.log(result);
     this.setData({
-      userInfo:result
+      userInfo: result
     })
   },
   onLoad() {
@@ -49,7 +49,13 @@ Page({
     this.setData({
       isselect: radiostatus
     }),
-      this.telreg()
+    this.telreg()
+    //获取地址数据
+    let data = wx.getStorageSync('addAddressData').addAddressData;
+    this.setData({
+      userInfo:data
+    })
+    console.log(data,'u');
   },
 
   /**

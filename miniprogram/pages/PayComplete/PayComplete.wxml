@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="img">
+    <image mode="aspectFill" class="imgsize" src="/assets/images/wxpay.png"></image>
+  </view>
+  <view class="text">支付成功</view>
+  <view class="text2">橙子会在24小时内为您发货，并推送信息给您，
+    请您耐心等待，3秒钟后为您跳转</view>
+    <view class="btn">完成支付</view>
+</view>

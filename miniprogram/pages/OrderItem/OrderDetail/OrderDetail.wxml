@@ -1,5 +1,5 @@
 <view class="container">
-  <OrderAddress></OrderAddress>
+  <OrderAddress bindCopyNum="CopyNum" bindCopyPhoneNum="CopyPhoneNum" addressdata="{{addressdata}}"></OrderAddress>
   <OrderDataDetail></OrderDataDetail>
   <OrderNum></OrderNum>
   <OrderStatus></OrderStatus>
@@ -7,6 +7,4 @@
     <view class="btn server">联系客服</view>
     <view class="btn order">取消订单</view>
   </view>
-
-
 </view>

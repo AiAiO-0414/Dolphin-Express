@@ -8,16 +8,16 @@
       <view class="text">保价</view>
     </view>
     <view class="flex__c">
-      <input class="input" type="text" placeholder="自定义物品价格，请填写真实物品价格" bindblur="onchange" />
+      <input name="inpVal" class="input" type="text" placeholder="自定义物品价格，请填写真实物品价格" bindblur="onchange" />
     </view>
   </view>
   <view class="pricecontainer" wx:for="{{prcieData}}" wx:key="id">
     <van-notice-bar class="notice" wrapable color="#EC0606" left-icon="info-o" text="{{item.noticetext}}" />
     <view class="flex_a_c prcietext">
-      <view>{{item.text}}</view>
-      <switch checked="{{item.status}}"></switch>
+      <view>{{item.text}}（保价的{{item.num}}%）</view>
+      <switch data-id="{{item.id}}" bindchange="onchecked" checked="{{item.status}}"></switch>
     </view>
-    <view class="prcie">保险费：¥ {{item.prcie}}</view>
+    <view class="prcie">保险费：¥ {{item.price}}</view>
   </view>
   <view class="flex_b_c">
     <view class="btn server">联系客服</view>

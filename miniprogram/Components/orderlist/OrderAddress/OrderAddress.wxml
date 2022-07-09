@@ -1,34 +1,34 @@
 <!-- <view class="container"> -->
-  <view class="address">
-    <view class="flex_a_c">
-      <view class="img">
-        <image class="imgsize" mode="aspectFill" src="/assets/images/address.png"></image>
-      </view>
-      <view class="text">
-        <view>
-          <text class="name">没希望仓库</text>
-          <text class="phonenum">{{phonenum}}</text>
-          <text class="copy">复制</text>
-        </view>
-        <view>
-          <text>深圳市龙华区龙华街道工业路壹城环智中心C座2607室</text>
-        </view>
-      </view>
+<view class="address">
+  <view class="flex_a_c">
+    <view class="img">
+      <image class="imgsize" mode="aspectFill" src="/assets/images/address.png"></image>
     </view>
-    <view class="flex_a_c addressbox">
-      <view class="img cityimg">
-        <image class="imgsize" mode="aspectFill" src="/assets/images/city.png"></image>
+    <view class="text">
+      <view>
+        <text class="name">没希望仓库</text>
+        <text class="phonenum" >{{phonenum}}</text>
+        <text class="copy" bindtap="copynum">复制</text>
       </view>
-      <view class="text">
-        <view>
-          <text class="name">没希望仓库</text>
-          <text class="phonenum">{{phonenum}}</text>
-          <text class="copy">复制</text>
-        </view>
-        <view>
-          <text>深圳市龙华区龙华街道工业路壹城环智中心C座2607室</text>
-        </view>
+      <view>
+        <text>深圳市龙华区龙华街道工业路壹城环智中心C座2607室</text>
       </view>
     </view>
   </view>
+  <view class="flex_a_c addressbox">
+    <view class="img cityimg">
+      <image class="imgsize" mode="aspectFill" src="/assets/images/city.png"></image>
+    </view>
+    <view class="text" wx:for="{{addressdata.formData}}" wx:key="Name">
+      <view>
+        <text class="name">{{item.Name}}</text>
+        <text class="phonenum">{{item.Phone}}</text>
+        <text bindtap="copy" class="copy">复制</text>
+      </view>
+      <view>
+        <text>{{item.Address}}</text>
+      </view>
+    </view>
+  </view>
+</view>
 <!-- </view> -->

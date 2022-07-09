@@ -59,11 +59,11 @@
       <view>联系客服</view>
       <van-icon name="arrow" color="#ccc" />
     </view>
-    <view class="flex_b_c addressitem">
+    <view class="flex_b_c addressitem" bindtap="process">
       <view>转运流程</view>
       <van-icon name="arrow" color="#ccc"/>
     </view>
-    <view class="flex_b_c addressitem">
+    <view class="flex_b_c addressitem" bindtap="notice">
       <view>转运须知</view>
       <van-icon name="arrow" color="#ccc" />
     </view>

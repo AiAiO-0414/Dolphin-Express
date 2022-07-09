@@ -1,29 +1,11 @@
-// pages/notice/notice.ts
+// pages/PayComplete/PayComplete.ts
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    time: 5 * 1000,
-    timeData: {},
-    isdisabled: true
-  },
-  onChange(e: any) {
-    this.setData({
-      timeData: e.detail,
-    });
-  },
 
-  onfinish() {
-    this.setData({
-      isdisabled: false,
-      timeData: '',
-    })
-  },
-
-  read() {
-    wx.navigateBack()
   },
 
   /**

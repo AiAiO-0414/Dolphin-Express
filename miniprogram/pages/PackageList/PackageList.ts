@@ -1,29 +1,18 @@
-// pages/notice/notice.ts
+// pages/PackageList/PackageList.ts
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    time: 5 * 1000,
-    timeData: {},
-    isdisabled: true
-  },
-  onChange(e: any) {
-    this.setData({
-      timeData: e.detail,
-    });
-  },
-
-  onfinish() {
-    this.setData({
-      isdisabled: false,
-      timeData: '',
-    })
-  },
-
-  read() {
-    wx.navigateBack()
+    PackageText: [
+      { title: '全部包裹', event: '查看您的全部包裹' },
+      { title: '退回包裹', event: '退回给商家或仓库处理' },
+      { title: '异常包裹', event: '违禁品' },
+      { title: '入库包裹', event: '已入库的包裹' },
+    ],
+    stepsData: [
+      { id: 1, text: '待处理', num: 3, height: 60 },
+      { id: 2, text: '待入仓', num: 6, height: 80 },
+      { id: 3, text: '待出仓', num: 7, height: 120 },
+      { id: 4, text: '待收货', num: 8, height: 60 },
+    ],
   },
 
   /**

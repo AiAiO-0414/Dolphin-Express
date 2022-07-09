@@ -1,16 +1,15 @@
 <view class="container">
-  <view class="addressform">
-    <view class="flex" wx:for="{{addressformText}}" wx:key="id">
-      <text class="laber">{{item.title}}</text>
-      <!-- <view style="display:{{isshow ? 'block' : 'none'}};" class="img">
-        <image class="imgsize" mode="aspectFit" src="{{item.img}}"></image>
-      </view> -->
-      <input data-index="{{index}}" bindinput="regtext" type="text" placeholder="{{item.text}}" />
+  <form bindsubmit="onSubmit">
+    <view class="addressform">
+      <view class="flex" wx:for="{{addressformText}}" wx:key="id">
+        <text class="laber">{{item.title}}：</text>
+        <input name="{{item.title}}" data-index="{{index}}" bindinput="regtext" type="text" placeholder="{{item.text}}" />
+      </view>
     </view>
-  </view>
-  <view class="flex_b_c default">
-  <view>设为默认</view>
-  <switch class="switch" checked="true" color="#00d962"></switch>
-  </view>
-  <view class="button" bindtap="addresslist">添加地址</view>
+    <view class="flex_b_c default">
+      <view>设为默认</view>
+      <switch class="switch" checked="true" color="#00d962"></switch>
+    </view>
+    <button class="button" form-type="submit">添加地址</button>
+  </form>
 </view>

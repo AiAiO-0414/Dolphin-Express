@@ -1,70 +1,57 @@
 // pages/cost/cost.ts
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    channel:''
+    channel: '',
+    boxsize: '',
+    channelstatus: '',
+    freightprice: '0.00',
+    statusData: [
+      { status: '0', price: 59, price2: 39 },
+      { status: '1', price: 69, price2: 49 },
+      { status: '2', price: 79, price2: 59 },
+      { status: '3', price: 128, price2: 35 },
+      { status: '4', price: 128, price2: 49 },
+    ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(){
+  onLoad() {
     let radiostatus = wx.getStorageSync('channeltext').channeltext;
-    console.log(radiostatus,'r');
+    let curindex = wx.getStorageSync('channeltext').curindex;
+    // console.log(radiostatus,'r');
     this.setData({
-      channel:radiostatus
+      channel: radiostatus,
+      channelstatus: curindex
     })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
+  getinpVal(e: any) {
+    let v = e.detail.value
+    if (v !== '') {
+      let r = e.detail.value.split(',')
+      r = r.map((item: any) => {
+        return Number(item);
+      });
+      let result = r.reduce((total: any, currentValue: any) => {
+        total = Number(total)
+        total *= currentValue
+        return total
+      })
+      result = Math.ceil(result / 6000 + "");
+      console.log(result);
+      this.setData({
+        boxsize: result
+      })
+      let freight = this.data.statusData.map((item: any) => {
+        if (item.status == this.data.channelstatus) {
+          return item.price + Number(this.data.boxsize - 1) * item.price2
+        }
+      }).filter((item: any) => item)
+      console.log(freight, 'f');
+      this.setData({
+        freightprice: freight
+      })
+    }
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
-  }
 })

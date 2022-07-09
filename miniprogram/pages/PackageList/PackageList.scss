@@ -1,0 +1,76 @@
+@import 'assets/css/common.scss';
+
+.list {
+  flex-wrap: wrap;
+}
+
+.packageList {
+  width: 161*2rpx;
+  height: 91*2rpx;
+  line-height: 70rpx;
+  border-radius: 28rpx;
+  color: #ffffff;
+  background-color: rgba(8, 129, 236, 100);
+  font-size: 28rpx;
+  text-align: left;
+  box-shadow: 0px 6rpx 14rpx 4rpx rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(187, 187, 187, 100);
+  padding-left: 30rpx;
+  padding-top: 15rpx;
+  box-sizing: border-box;
+  margin-top: 50rpx;
+}
+
+.text1 {
+  font-size: 32rpx;
+  font-weight: 700;
+}
+
+.stepsbox {
+  position: relative;
+}
+
+.row {
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border-radius: 50rpx;
+  background-color: rgba(19, 82, 195, 100);
+  color: rgba(255, 255, 255, 100);
+  text-align: center;
+  font-size: 24rpx;
+}
+
+.text {
+  margin-left: 10rpx;
+  font-size: 26rpx;
+  display: flex;
+  color: #999494;
+  line-height: 60rpx;
+}
+
+
+
+.num {
+  color: #0881ec;
+  font-size: 30rpx;
+  font-weight: 700;
+  margin-left: 30rpx;
+}
+
+.num2 {
+  margin-left: 60rpx;
+}
+
+.stepstext {
+  margin-left: 50rpx;
+}
+
+.divider {
+  border-left: solid 2px #c4bcbc;
+  // height: 60rpx;
+  margin-left: 30rpx;
+  margin-left: 66rpx;
+  margin-top: 10rpx;
+  margin-bottom:10rpx;
+}

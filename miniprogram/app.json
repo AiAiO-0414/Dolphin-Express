@@ -17,7 +17,9 @@
     "Components/couponlist/NotExpiredCoupon/NotExpiredCoupon",
     "pages/OrderItem/OrderDetail/OrderDetail",
     "pages/InsuredPrice/InsuredPrice",
-    "pages/payDetail/payDetail"
+    "pages/payDetail/payDetail",
+    "pages/PackageList/PackageList",
+    "pages/PayComplete/PayComplete"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -67,7 +69,10 @@
     "van-search": "@vant/weapp/search/index",
     "van-tab": "@vant/weapp/tab/index",
     "van-tabs": "@vant/weapp/tabs/index",
-    "van-count-down": "@vant/weapp/count-down/index"
+    "van-count-down": "@vant/weapp/count-down/index",
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-checkbox-group": "@vant/weapp/checkbox-group/index",
+    "van-popup": "@vant/weapp/popup/index"
   },
   "sitemapLocation": "sitemap.json"
 }

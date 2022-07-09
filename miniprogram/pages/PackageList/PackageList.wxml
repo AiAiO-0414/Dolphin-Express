@@ -1,0 +1,29 @@
+<view class="container">
+  <view class="flex_a_c list">
+    <view class="packageList" wx:for="{{PackageText}}" wx:key="item.title">
+      <view class="text1">{{item.title}}</view>
+      <view>{{item.event}}</view>
+    </view>
+  </view>
+</view>
+<view class="steps">
+  <view class="stepsbox" wx:for="{{stepsData}}" wx:key="id">
+    <view class="flex__c stepstext">
+      <view class="row">{{item.id}}</view>
+      <view class="stepstext1">{{item.text}}</view>
+      <view class="num">{{item.num}}</view>
+    </view>
+    <view class="flex__c">
+      <view class="divider">
+        <view class="text">
+          <view>待捡货</view>
+          <view class="num2">6</view>
+        </view>
+        <view class="text">
+          <view>打包中</view>
+          <view class="num2">7</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

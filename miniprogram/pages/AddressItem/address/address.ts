@@ -5,7 +5,34 @@ Page({
    * 页面的初始数据
    */
   data: {
-    addressData:''
+    addressData: '',
+    formData: [],
+  },
+  submitform(this: any, e: any) {
+    this.setData({
+      formData: [e.detail]
+    })
+    let formData = this.data.formData;
+    wx.setStorage({
+      data: { 'formData': formData },
+      key: 'AddressformData',
+    })
+    // e.detail[0].((item: any) => {
+    //   if (item != '') {
+    //     wx.navigateTo({
+    //       url: '/pages/OrderItem/OrderDetail/OrderDetail'
+    //     })
+    //   }
+    // })
+    if (e.detail[0].Name != '') {
+      console.log(e.detail, '3');
+      // wx.navigateTo({
+      //   url: '/pages/OrderItem/OrderDetail/OrderDetail'
+      // })
+
+    }
+
+    console.log(this.data.formData, 'r');
   },
 
   /**
@@ -18,53 +45,4 @@ Page({
     //   addressData: result[0]
     // })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
-  }
 })

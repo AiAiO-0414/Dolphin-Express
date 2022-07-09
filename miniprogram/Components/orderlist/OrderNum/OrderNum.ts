@@ -6,17 +6,18 @@ Component({
 
   },
   data: {
-    isdisabled:false,
+    isdisabled: false,
     index: '',
     key: '',
     arr: <any>[],
     ordernumArr: <any>[],
     isshow: false,
     show: false,
-    detailData:[{id:1,city:'美国','channel':'普通货物',statustext:'待填写',time:'2022-05-09 14:07:12',status:0}]
+    detailData: [{ id: 1, city: '美国', 'channel': '普通货物', statustext: '待填写', time: '2022-05-09 14:07:12', status: 0 }]
   },
   methods: {
     getnum(this: any, e: any) {
+      // if (e.detail.value) {
       let value = e.detail.value
       for (var i = 0; i <= value - 1; i++) {
         this.data.arr.push({
@@ -32,8 +33,10 @@ Component({
       })
       console.log(orderindex);
       this.setData({
-        isdisabled:true
+        isdisabled: true
       })
+      // }
+
       // wx.setStorage({
       //   data: { 'orderindex': orderindex },
       //   key: 'orderindex',
@@ -42,16 +45,34 @@ Component({
 
     //订单号
     getordernum(this: any, e: any) {
+      let val = e.detail.value;
+      let iputIndex = e.currentTarget.dataset.index;
+      console.log(iputIndex, 'i');
+      if (val == '') {
+        return
+      }
+      let r = this.data.arr.filter((item:any)=>{
+        return item
+      })
+      // => item.id == iputIndex)[0].value = val
+      console.log(r,'rrrr');
+      
+
+      // this.data.arr.filter((item:any)=>{
+      //   if(item.index == iputIndex) {
+
+      //   }
+      // console.log(item,'id');   
+      // })
       this.setData({
         isshow: true
       })
-      let iputIndex = e.currentTarget.dataset.index;
       this.setData({
         key: iputIndex
       })
-      let value = e.detail.value;
+
       let newArr = this.data.ordernumArr;
-      newArr = [...newArr, value];
+      newArr = [...newArr, val];
       this.setData({
         ordernumArr: newArr
       })
@@ -59,7 +80,6 @@ Component({
       let result = this.data.arr.filter((item: any) => {
         console.log(iputIndex, '柔呆呆');
         if (item.index == iputIndex) {
-
           item.value = this.data.ordernumArr
           return item.value
         }
@@ -98,15 +118,15 @@ Component({
       })
     },
     //确认增加
-    addinput(this:any){
+    addinput(this: any) {
       console.log(111);
       let s = this.data.index
-      console.log(s+1);
+      console.log(s + 1);
       this.setData({
-        index:s+1
+        index: s + 1
       })
       console.log(this.data.index);
-      
+
     },
     //确定按钮
     yesbutton(this: any) {

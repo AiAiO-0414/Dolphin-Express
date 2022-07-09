@@ -31,5 +31,15 @@ Page({
     wx.navigateTo({
       url:'/pages/couponItem/mycoupon/mycoupon'
     })
+  },
+  process(){
+    wx.navigateTo({
+      url:'/pages/process/process'
+    })
+  },
+  notice(){
+    wx.navigateTo({
+      url:'/pages/notice/notice'
+    })
   }
 })

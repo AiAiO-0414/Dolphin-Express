@@ -18,9 +18,7 @@ Page({
       timeData: '',
     })
   },
-  // read(){
-  //   wx.navigateTo({
-  //     url:'/pages/index/index'
-  //   })
-  // }
+  read(){
+    wx.navigateBack()
+  }
 })

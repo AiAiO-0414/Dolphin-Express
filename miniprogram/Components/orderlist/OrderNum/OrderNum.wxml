@@ -9,11 +9,11 @@
   </view>
   <view class="flex__c inputbox" wx:for="{{index}}" wx:key="item">
     <text class="index">{{item+1}}</text>
-    <input data-index="{{index}}" name="{{item}}" bindblur="getordernum" class="input" placeholder="请输入订单号" type="text" />
+    <input data-index="{{item}}" name="{{item}}" bindblur="getordernum" class="input" placeholder="请输入订单号" type="text" />
     <view bindtap="delete">
       <van-icon class="del" name="delete-o" />
     </view>
-    <view class="warehoused">待入仓</view>
+    <!-- <view class="warehoused">待入仓</view> -->
   </view>
   <view class="btn" bindtap="addbtn">+ 补充快递单号</view>
 </view>

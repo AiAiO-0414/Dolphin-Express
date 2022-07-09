@@ -1,15 +1,17 @@
-<view class="ReceiveContainer">
-  <view class="title">目标国收件信息</view>
-  <van-notice-bar color="red" left-icon="info-o" text="请用英文填写" />
-  <view class="addAddress" bindtap="addAddress">+选择地址</view>
-  <view class="addressform">
-    <view class="flex" data-id="{{id}}" wx:for="{{addressformText}}" wx:key="id">
-      <text class="laber">{{item.title}}</text>
-      <view style="display:{{item.status}};" class="img">
-        <image class="imgsize" mode="aspectFit" src="{{item.img}}"></image>
+<form bindsubmit="submitform">
+  <view class="ReceiveContainer">
+    <view class="title">目标国收件信息</view>
+    <van-notice-bar color="red" left-icon="info-o" text="请用英文填写" />
+    <view class="addAddress" bindtap="addAddress">+选择地址</view>
+    <view class="addressform">
+      <view class="flex" data-id="{{id}}" wx:for="{{addressformText}}" wx:key="id">
+        <text class="laber">{{item.title}}：</text>
+        <view style="display:{{item.status}};" class="img">
+          <image class="imgsize" mode="aspectFit" src="{{item.img}}"></image>
+        </view>
+        <input name="{{item.title}}" data-index="{{index}}" bindinput="regtext" type="text" placeholder="{{item.text}}" />
       </view>
-      <input data-index="{{index}}" bindinput="regtext" type="text" placeholder="{{item.text}}" />
     </view>
   </view>
-</view>
-<view class="button">立即转运</view>
+  <button disabled="{{isdisabled}}" class="button" form-type="submit">立即转运</button>
+</form>

@@ -1,71 +1,82 @@
 // pages/payDetail/payDetail.ts
 Page({
   data: {
-    paydata:[
-      {title:'订单号',value:'20220509140712345678'},
-      {title:'转运线路',value:'中国-美国'},
-      {title:'预选渠道',value:'普通货物'},
-      {title:'货物属性',value:'普通货物'},
-      {title:'转运费',value:'￥138.00'},
-      {title:'附加费',value:'￥38.00'},
-      {title:'丢失险',value:'￥0.00'},
-      {title:'关税险',value:'￥0.00'},
-  ]
+    paydata: [
+      { title: '订单号', value: '20220509140712345678' },
+      { title: '转运线路', value: '中国-美国' },
+      { title: '预选渠道', value: '普通货物' },
+      { title: '货物属性', value: '普通货物' },
+      { title: '转运费', value: '￥138.00' },
+      { title: '附加费', value: '￥38.00' },
+      { title: '丢失险', value: '￥0.00' },
+      { title: '关税险', value: '￥0.00' },
+    ],
+    show: false,
+    checked: false,
+    time: 10 * 1000,
+    timeData: {},
+    isdisabled: true,
+    timedisabled: true
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad() {
-
+  onTime(e: any) {
+    this.setData({
+      timeData: e.detail,
+    });
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
+  onfinish() {
+    this.setData({
+      timedisabled: false,
+      timeData: '',
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
+  onChange(event: any) {
+    this.setData({
+      checked: event.detail,
+    });
+    if (this.data.checked) {
+      this.setData({
+        show: true
+      })
+    //   const { windowHeight } = wx.getSystemInfoSync()
+    //   const query = wx.createSelectorQuery()
+    //   query.select('.btn').boundingClientRect()
+    //   query.exec(rect => {
+    //     const { top, height } = rect[0]
+    //   if ((top < windowHeight) && (top + height > 0)) {
+    //     console.log('元素在可视区域出现')
+    //   } else {
+    //     console.log('元素在可视区域消失')
+    //   }
+    // })
+    } else {
+      this.setData({
+        show: false,
+        isdisabled:true
+      })
+    }
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
+  agree(){
+    this.setData({
+      isdisabled:false,
+      show:false
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
+  checkboxchange() {
+    console.log(111);
+    // this.setData({
+    //   checked:false
+    // })
+    // if(this.data.checked) {
+    //   this.setData({
+    //     show:true
+    //   })
+    // }
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
+  pay(){
+    wx.navigateTo({
+      url:'/pages/PayComplete/PayComplete'
+    })
   }
 })

@@ -67,11 +67,98 @@
   margin-left: 10rpx;
 }
 
-.van-notice-bar__content{
+.van-notice-bar__content {
   font-size: 20rpx;
 }
 
 .buttomtext {
-  text-align: right;
+  float: right;
 }
 
+.couponprice {
+  color: rgb(204, 0, 0);
+}
+
+.price {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.text1 {
+  color: #a7a7a7;
+  font-size: 14px;
+  margin: 0 10rpx 0 5rpx;
+}
+
+.buttom {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 248*2rpx;
+  height: 66*2rpx;
+  line-height: 20px;
+  background-color: rgba(255, 255, 255, 79);
+  color: rgba(16, 16, 16, 100);
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid rgba(226, 226, 226, 100);
+  box-sizing: border-box;
+}
+
+.paybtn {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 127*2rpx;
+  height: 66*2rpx;
+  line-height: 40rpx;
+  background-color: rgba(39, 79, 5, 100);
+  color: rgba(16, 16, 16, 100);
+  font-size: 32rpx;
+  text-align: center;
+  color: #F5E4AD;
+  border-radius: 0;
+}
+
+.agreement {
+  color: #888888;
+  box-sizing: border-box;
+  padding: 15rpx;
+  line-height: 50rpx;
+  color: 24rpx;
+  width: 750rpx;
+}
+
+.agreementtext1 {
+  color: #000000;
+  font-size: 30rpx;
+  font-weight: 700;
+}
+
+.btn {
+  width: 223*2rpx;
+  height: 45*2rpx;
+  line-height: 45*2rpx;
+  border-radius: 47px;
+  background-color: rgba(231, 105, 29, 100);
+  color: rgba(255, 255, 255, 100);
+  font-size: 20px;
+  text-align: center;
+  margin: 45rpx 0 45rpx 160rpx;
+}
+
+.position {
+  position: relative;
+}
+
+.item {
+  position: absolute;
+  right: 102*2rpx;
+  top: 26rpx;
+  display: flex;
+  font-size: 40rpx;
+  color: #838383;
+}
