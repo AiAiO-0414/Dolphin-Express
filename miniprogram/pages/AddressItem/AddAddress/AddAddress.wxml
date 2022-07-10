@@ -8,7 +8,7 @@
     </view>
     <view class="flex_b_c default">
       <view>设为默认</view>
-      <switch class="switch" checked="true" color="#00d962"></switch>
+      <switch class="switch" bindchange="checkstatus" data-item="{{item}}" checked="{{status}}" color="#00d962"></switch>
     </view>
     <button class="button" form-type="submit">添加地址</button>
   </form>

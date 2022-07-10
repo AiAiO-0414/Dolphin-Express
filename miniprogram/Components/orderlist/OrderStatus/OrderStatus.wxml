@@ -10,7 +10,8 @@
     <text>普通货物</text>
   </view>
   <view class="order">订单状态：
-    <text class="status">待填写</text>
+    <text class="status" wx:if="{{orderstate == 0}}">待填写</text>
+    <text class="status" wx:else>待入仓</text>
   </view>
   <view class="order">下单时间：
     <text>2022-05-09 14:07:12</text>

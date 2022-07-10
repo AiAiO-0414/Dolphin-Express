@@ -9,7 +9,7 @@
         <view style="display:{{item.status}};" class="img">
           <image class="imgsize" mode="aspectFit" src="{{item.img}}"></image>
         </view>
-        <input name="{{item.title}}" data-index="{{index}}" bindinput="regtext" type="text" placeholder="{{item.text}}" />
+        <input name="{{item.title}}" data-index="{{index}}" bindinput="regtext" type="text" value="{{item.value}}" placeholder="{{item.text}}" />
       </view>
     </view>
   </view>

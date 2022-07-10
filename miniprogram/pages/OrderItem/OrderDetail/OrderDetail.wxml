@@ -1,8 +1,13 @@
 <view class="container">
   <OrderAddress bindCopyNum="CopyNum" bindCopyPhoneNum="CopyPhoneNum" addressdata="{{addressdata}}"></OrderAddress>
-  <OrderDataDetail></OrderDataDetail>
-  <OrderNum></OrderNum>
-  <OrderStatus></OrderStatus>
+  <!-- <OrderDataDetail></OrderDataDetail> -->
+  <OrderNum arr="{{arr}}" isdisabled="{{isdisabled}}" show="{{show}}" 
+  isshow="{{isshow}}" orderstate="{{orderstate}}"
+  bindgetordernum="getordernum" bindgetnum="getnum" bindaddinput="addinput" bindaddbtn="addbtn" binddelete="delete"
+  bindyesbutton="yesbutton"
+
+  ></OrderNum>
+  <OrderStatus orderstate="{{orderstate}}"></OrderStatus>
   <view class="flex_b_c">
     <view class="btn server">联系客服</view>
     <view class="btn order">取消订单</view>

@@ -3,24 +3,25 @@ Component({
   properties: {
     addressData: Object
   },
-  // observers: {
-  //   'addressData': function (this: any, value: any) {
-  //     console.log(value, 'dbs');
-  //     this.setData({
-  //       inputvalue: value
-  //     })
-  //       let result = this.data.addressformText.map((item: any) => {
-  //         // if(item.id == )
-  //         if(item.id === 1) {
-  //            item.value = value.username
-  //          return item
-  //         }
-
-  //       })
-  //       console.log(result,'r');
-
-  //     }
-  //   },
+  observers: {
+    'addressData': function (this: any, value: any) {
+      console.log(value, 'dbs');
+      let arr: any[] = []
+      for(var key in value) {
+        console.log(value[key]);
+        arr.push(value[key])
+      }
+      arr.splice(arr.length - 1,1)
+      let result = this.data.addressformText.map((item:any,index:any)=>{
+        item.value = arr[index]
+        return item
+      })
+      this.setData({
+        addressformText:result
+      })
+      console.log(this.data.addressformText,'result');
+      }
+    },
   data: {
     isshow: false,
     key: '',
@@ -42,11 +43,8 @@ Component({
         key: ids
       })
       let value = e.detail.value
-      console.log(value,'11');
-      if(value == ''){
-        return
-      }
       var reg = /[\u4e00-\u9fa5]/;
+      // var reg2 = /^\[ \t]*$/
       let isHide = reg.test(value);
       if (ids == this.data.key) {
         let result = this.data.addressformText.map((item: any) => {

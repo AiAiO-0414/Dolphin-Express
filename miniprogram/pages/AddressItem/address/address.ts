@@ -1,9 +1,5 @@
-// pages/address/address.ts
-Page({
 
-  /**
-   * 页面的初始数据
-   */
+Page({
   data: {
     addressData: '',
     formData: [],
@@ -17,32 +13,25 @@ Page({
       data: { 'formData': formData },
       key: 'AddressformData',
     })
-    // e.detail[0].((item: any) => {
-    //   if (item != '') {
-    //     wx.navigateTo({
-    //       url: '/pages/OrderItem/OrderDetail/OrderDetail'
-    //     })
-    //   }
-    // })
-    if (e.detail[0].Name != '') {
-      console.log(e.detail, '3');
-      // wx.navigateTo({
-      //   url: '/pages/OrderItem/OrderDetail/OrderDetail'
-      // })
-
+    for (var key in e.detail) {
+      wx.showToast({
+        title: '输入框不能为空',
+        icon:'error',
+      })
+      if (!e.detail[key]) return;
     }
-
+    wx.navigateTo({
+      url: '/pages/OrderItem/OrderDetail/OrderDetail'
+    })
     console.log(this.data.formData, 'r');
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad() {
-    // let result = JSON.parse(decodeURIComponent(this.options.userinfo))
-    // console.log(result[0],'r');
-    // this.setData({
-    //   addressData: result[0]
-    // })
+    let result = this.options.AddressData
+    result = JSON.parse(decodeURIComponent(result))
+    console.log(result,'rrr');
+    this.setData({
+      addressData:result
+    })
   },
 })

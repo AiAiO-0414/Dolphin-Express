@@ -8,9 +8,9 @@ Page({
       { id: 4, title: 'City', img: '/assets/images/gantan.png', text: 'Please fill in the city' },
       { title: 'PostCode', img: '/assets/images/gantan.png', text: 'Please fill in the postcode' },
     ],
+    status:false,
     addAddressData: <any>[]
   },
-  regtext() { },
   addresslist() {
     wx.navigateTo({
       url: '/pages/AddressItem/selectAddress/selectAddress'
@@ -18,26 +18,31 @@ Page({
   },
   onSubmit(e: any) {
     let value = e.detail.value;
-    let newArr = [];
-    // let data = this.data.addAddressData
-    newArr.push(this.data.addAddressData)
-    this.data.addAddressData.forEach((item:any) => {
-      console.log(item,'i');
-      return item
-    });
-    // let newArr = this.data.addAddressData
-    newArr = [...newArr, value];
-    console.log(newArr, 'newArr');
-    this.setData({
-      addAddressData: newArr
-    })
-    console.log(this.data.addAddressData);
-    wx.setStorage({
-      data: { 'addAddressData': this.data.addAddressData },
-      key: 'addAddressData',
-    })
-    wx.navigateTo({
-      url: '/pages/AddressItem/selectAddress/selectAddress'
-    })
-  },
-})
+    let arr = <any>[];
+    for (var key in value) {
+      if (!value[key]) arr.push(key);
+    }
+    if (arr.length !== 0) {
+      wx.showToast({
+        title: '输入框不能为空',
+        icon: 'none',
+      })
+      return
+    }
+    value = {
+      ...value,
+      state:this.data.status,
+    }
+      let addData = wx.getStorageSync('addAddressData');
+      value = [...addData, value];
+      wx.setStorageSync("addAddressData", value);
+      wx.navigateTo({
+        url: '/pages/AddressItem/selectAddress/selectAddress'
+      })
+    },
+    checkstatus(e: any) {  
+     this.setData({
+       status:e.detail.value
+     })
+    }
+  })

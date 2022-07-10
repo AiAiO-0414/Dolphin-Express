@@ -1,13 +1,18 @@
 <view class="selectcontainer" wx:if="{{userInfo}}">
-  <view class="mine" bindtap="assignment">
-    <view class="my flex_c_c">我</view>
-    <view class="right" wx:for="{{userInfo}}" wx:key="index">
-      <text class="username">{{item.Name}}</text>
-      <text class="phone">{{item.Phone}}</text>
-      <view class="address">{{item.Address}}</view>
+  <view class="mine" wx:for="{{userInfo}}" wx:key="index">
+    <view class="assignment" >
+      <view class="my flex_c_c">{{item.Name[0]}}</view>
+      <view bindtap="assignment" data-index="{{index}}" class="right">
+        <text class="username">{{item.Name}}</text>
+        <text class="phone">{{item.Phone}}</text>
+        <view class="address">{{item.Address}}</view>
+      </view>
+      <view class="del flex_c_c" data-index="{{index}}" bindtap="del">
+        <van-icon  name="delete-o" />
+      </view>
     </view>
     <view class="default flex_a">
-      <radio color="#1a3a66" checked="{{isselect}}" bindtap="status"></radio>
+      <radio data-index="{{index}}" color="#1a3a66" checked="{{item.state}}" bindtap="status"></radio>
       <text>默认寄件地址</text>
     </view>
   </view>

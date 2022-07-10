@@ -1,5 +1,66 @@
 @import 'assets/css/common.scss';
 
+@import 'assets/css/common.scss';
+
+.datacontainer {
+  width: 347*2rpx;
+  line-height: 60rpx;
+  opacity: 0.85;
+  background-color: rgba(255, 255, 255, 79);
+  color: rgba(16, 16, 16, 100);
+  font-size: 28rpx;
+  box-shadow: 0px 4rpx 20rpx 0px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 100);
+  margin-top: 30rpx;
+  padding: 15rpx;
+  box-sizing: border-box;
+}
+
+.datatext1 {
+  color: #ff822f;
+}
+
+.img {
+  width: 93px;
+  height: 82px;
+}
+
+.bill {
+  width: 319*2rpx;
+  height: 240rpx;
+  line-height: 40rpx;
+  opacity: 0.85;
+  border-radius: 6rpx;
+  background-color: rgba(255, 255, 255, 79);
+  color: rgba(16, 16, 16, 100);
+  font-size: 28rpx;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  padding: 15rpx;
+  margin-bottom: 30rpx;
+}
+
+.billtext {
+  width: 168px;
+  height: 120px;
+  line-height: 17px;
+  color: #101010;
+  font-size: 12px;
+  text-align: left;
+  padding: 15rpx;
+  box-sizing: border-box;
+}
+
+.billtext1 {
+  color: #000;
+  font-weight: 700;
+  font-size: 30rpx;
+  margin-bottom:10rpx;
+}
+
+
+
 .numcontainer {
   position: relative;
   width: 347*2rpx;
@@ -65,7 +126,7 @@ textarea {
 }
 
 .inputbox {
-  margin-left: 54rpx;
+  margin-left: 30rpx;
   height: 80rpx;
   position: relative;
 }
@@ -88,11 +149,20 @@ textarea {
 }
 
 .del {
-  position: absolute;
   font-size: 40rpx;
   top: 15rpx;
   right: 75rpx;
   color: #999898;
+  margin-bottom: 15rpx;
+  margin-left: 10rpx;
+}
+
+.warehoused {
+  padding: 2rpx;
+  box-sizing: border-box;
+  background-color: rgb(238, 153, 212);
+  font-size: 22rpx;
+  color: rgb(190, 30, 142);
 }
 
 .btn {

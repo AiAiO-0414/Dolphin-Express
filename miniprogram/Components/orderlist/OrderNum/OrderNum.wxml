@@ -1,4 +1,34 @@
-<view class="numcontainer">
+<view class="datacontainer" wx:if="{{orderstate==0}}">
+  <view class="datatext">
+    <view>运费：¥ 138.00</view>
+    <view>附加费：¥ 0.00</view>
+    <view>称重重量：5.6 kg</view>
+    <view>分拣备注：<text class="datatext1">已拆封分拣，统一归类</text></view>
+    <view>打包备注：<text class="text1">东西太多，已统一打包加固</text></view>
+    <view>称重图片：</view>
+    <view class="flex_a_c">
+      <view wx:key="item" data-src="{{index}}" class="img" wx:for="{{imgList}}" bindtap="preview">
+        <image class="imgsize" mode="aspectFill" src="{{item}}"></image>
+      </view>
+    </view>
+    <view>账单：</view>
+    <view class="bill flex_a_c" wx:for="{{billdata}}" wx:key="id">
+      <view class="img" bindtap="preview">
+        <image class="imgsize" mode="aspectFill" src="{{item.img}}"></image>
+      </view>
+      <view class="billtext">
+        <view class="billtext1">{{item.billnum}}</view>
+        <view>属性：{{item.billattribute}}</view>
+        <view>长宽高：{{item.imgsize}}</view>
+        <view>计费重量：{{item.billkg}}</view>
+        <view> 计费方式：{{item.billmethod}}</view>
+        <view>运费：￥{{item.billprice}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="numcontainer" wx:else>
   <van-notice-bar color="#dd001b" background="#fff" left-icon="info-o" text="快递全部到齐点击确认打包后，订单不可修改" />
   <view class="flex_b_c num">
     <view class="text"><text class="icon">*</text>快递个数</view>
@@ -7,23 +37,23 @@
   <view class="remarks">
     <textarea placeholder="备注信息，例如：去掉包装盒等" name="" id=""></textarea>
   </view>
-  <view class="flex__c inputbox" wx:for="{{index}}" wx:key="item">
-    <text class="index">{{item+1}}</text>
-    <input data-index="{{item}}" name="{{item}}" bindblur="getordernum" class="input" placeholder="请输入订单号" type="text" />
-    <view bindtap="delete">
+  <view class="flex__c inputbox" wx:for="{{arr}}" wx:key="item">
+    <text class="index">{{index+1}}.</text>
+    <input data-id="{{item.id}}" name="{{item}}" bindblur="getordernum" disabled="{{item.disabled}}" value="{{item.val}}" class="input" placeholder="请输入订单号" type="text" />
+    <view wx:if="{{item.status==0}}" bindtap="delete" data-index="{{index}}">
       <van-icon class="del" name="delete-o" />
     </view>
-    <!-- <view class="warehoused">待入仓</view> -->
+    <view wx:if="{{item.status==1}}" class="del">
+      <view class="warehoused">待入仓</view>
+    </view>
   </view>
-  <view class="btn" bindtap="addbtn">+ 补充快递单号</view>
+  <view class="btn" bindtap="addbtn" data-num="{{1}}">+ 补充快递单号</view>
 </view>
 <van-dialog use-slot title="请确认快递单号是否无误" show="{{ isshow }}" show-cancel-button bind:close="onClose" bind:confirm="yesbutton">
   <view class="dialogtext">请确认快递单号【test12346】是否无误，
     一旦提交，不可修改。</view>
 </van-dialog>
-<van-dialog use-slot title="是否增加快递单号？" show="{{ show }}" show-cancel-button bind:close="onClose" bind:confirm="addinput"
-confirmButtonColor="#78cd83"	
->
+<van-dialog use-slot title="是否增加快递单号？" show="{{ show }}" show-cancel-button bind:close="onClose" bind:confirm="addinput" confirmButtonColor="#78cd83">
   <view class="dialogtext">增加快递单号后，发往转运中心的
-快递个数+1。是否要继续？</view>
+    快递个数+1。是否要继续？</view>
 </van-dialog>
